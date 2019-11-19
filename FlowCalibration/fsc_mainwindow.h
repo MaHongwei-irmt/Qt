@@ -39,6 +39,8 @@ public:
     explicit FSC_MainWindow(QWidget *parent = nullptr);
     ~FSC_MainWindow();
 
+    bool sktConed[SOCKET_NUMBER];
+
 private slots:
 
 
@@ -53,6 +55,7 @@ private slots:
     void sktScale_connect_suc(int i);
     void sktScale_connect_dis(int i);
     void sktScale_error(QAbstractSocket::SocketError, int i);
+    void mainTimerUpdate();
 
 
 private:
@@ -68,6 +71,10 @@ private:
     QSignalMapper * sktDisconMapper;
     QSignalMapper * sktErrMapper;
     QSignalMapper * sktReadMapper;
+
+    QTimer           *mainTimer         = nullptr;
+
+    int sktConCommandTime[SOCKET_NUMBER];
 
 
 };

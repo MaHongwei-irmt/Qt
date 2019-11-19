@@ -18,6 +18,7 @@ int fsc_global::port_number[SOCKET_NUMBER];
 
 FSC_MainWindow::FSC_MainWindow(QWidget *parent) :
     QMainWindow(parent),
+    mainTimer(new QTimer(this)),
     ui(new Ui::FSC_MainWindow)
 {
     ui->setupUi(this);
@@ -69,11 +70,21 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) :
     connect(sktErrMapper, SIGNAL(mapped(int)), this, SLOT(sktScale_error(int)));
 
 
+    sktConed[0] = false;
     fsc_global::sktTcp[0]->connectToHost(QHostAddress(fsc_global::ip_PLC), fsc_global::port_number[0]);
+
+    QDateTime time = QDateTime::currentDateTime();   //获取当前时间
+
+    sktConCommandTime[0] = time.toTime_t();   //将当前时间转为时间戳
 
     for (int i = 1; i < SOCKET_NUMBER; i++)
     {
+        sktConed[i] = false;
         fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip_RS_Server), fsc_global::port_number[i]);
+
+
+        time = QDateTime::currentDateTime();
+        sktConCommandTime[i] = time.toTime_t();
     }
 
 
@@ -86,13 +97,46 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) :
 
     connect(ui->lineEdit_scale_show_1,SIGNAL(clicked(bool)),this,SLOT(on_tbnSysDevCheck_clicked()));
 
+    connect(mainTimer,SIGNAL(timeout()),this,SLOT(mainTimerUpdate()));
+
+
+    mainTimer->start(1000);
+
 }
 
+void FSC_MainWindow::mainTimerUpdate()
+{
+    static int j = 1;
 
+    if(j % 5 == 0)
+    {
+        for (int i = 0; i < SOCKET_NUMBER; i++)
+        {
+            if (sktConed[i] == false)
+            {
+
+                fsc_global::sktTcp[i]->abort();
+                fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip_RS_Server), fsc_global::port_number[i]);
+
+
+                qDebug() << QString::number(i);
+            }
+        }
+    }
+
+
+
+
+
+    j++;
+
+}
 
 void FSC_MainWindow::sktScale_connect_suc(int i)
 {
     QMessageBox::information(this, "show", QString::number(i) + " con");
+
+    sktConed[i] = true;
 
 }
 
@@ -103,6 +147,8 @@ void FSC_MainWindow::sktScale_connect_dis(int i)
     fsc_global::sktTcp[i]->abort();
 
     fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip_RS_Server), fsc_global::port_number[i]);
+
+    sktConed[i] = false;
 
 }
 
