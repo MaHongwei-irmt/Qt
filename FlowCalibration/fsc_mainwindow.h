@@ -10,7 +10,7 @@ namespace Ui {
 class FSC_MainWindow;
 }
 
-
+#define FSCLOG  qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:zzz")
 
 #define SOCKET_NUMBER  16
 
@@ -56,14 +56,16 @@ private slots:
     void sktScale_connect_suc(int i);
     void sktScale_connect_dis(int i);
     void sktScale_error(int i);
-    void mainTimerUpdate();
+    void mainLoop();
 
 
 private:
     Ui::FSC_MainWindow *ui;
 
-    void ParaInit();
-    void PlotInit();
+    void ParaInit(void);
+    void PlotInit(void);
+    void SocketInit(void);
+
     void PlotReplay(const QString &arg1);
 
     QString ConnectQStringAndNum(QString str, int i);
@@ -73,7 +75,7 @@ private:
     QSignalMapper * sktErrMapper;
     QSignalMapper * sktReadMapper;
 
-    QTimer           *mainTimer         = nullptr;
+    QTimer           *mainLoopTimer         = nullptr;
 
     uint sktConCommandTime[SOCKET_NUMBER];
 

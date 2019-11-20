@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_FSC_MainWindow_t {
     QByteArrayData data[13];
-    char stringdata0[247];
+    char stringdata0[240];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,7 +43,7 @@ QT_MOC_LITERAL(8, 172, 20), // "sktScale_connect_suc"
 QT_MOC_LITERAL(9, 193, 1), // "i"
 QT_MOC_LITERAL(10, 195, 20), // "sktScale_connect_dis"
 QT_MOC_LITERAL(11, 216, 14), // "sktScale_error"
-QT_MOC_LITERAL(12, 231, 15) // "mainTimerUpdate"
+QT_MOC_LITERAL(12, 231, 8) // "mainLoop"
 
     },
     "FSC_MainWindow\0on_tbnSysDevCheck_clicked\0"
@@ -52,7 +52,7 @@ QT_MOC_LITERAL(12, 231, 15) // "mainTimerUpdate"
     "arg1\0on_comboBox_SensorTypeName_currentIndexChanged\0"
     "index\0sktScale_connect_suc\0i\0"
     "sktScale_connect_dis\0sktScale_error\0"
-    "mainTimerUpdate"
+    "mainLoop"
 };
 #undef QT_MOC_LITERAL
 
@@ -105,7 +105,7 @@ void FSC_MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 4: _t->sktScale_connect_suc((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 5: _t->sktScale_connect_dis((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 6: _t->sktScale_error((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 7: _t->mainTimerUpdate(); break;
+        case 7: _t->mainLoop(); break;
         default: ;
         }
     }

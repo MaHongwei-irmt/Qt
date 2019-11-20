@@ -7,31 +7,12 @@ void outputMessage(QtMsgType type, const QMessageLogContext &context, const QStr
 {
     static QMutex mutex;
     mutex.lock();
-    QString text;
 
-    switch(type)
-    {
+    (void)type;
 
-    case QtDebugMsg:
-        text = QString("Debug:");
-        break;
-    case QtWarningMsg:
-        text = QString("Warning:");
-        break;
-    case QtCriticalMsg:
-        text = QString("Critical:");
-        break;
-    case QtFatalMsg:
-        text = QString("Fatal:");
-        break;
-    case QtInfoMsg:
-        text = QString("Info:");
-        break;
-    }
-
-    QString context_info = QString("File:(%1) Line:(%2)").arg(QString(context.file)).arg(context.line);
-    QString message = QString("%1 %2 %3").arg(text).arg(context_info).arg(msg);
-    QString current_date = QDateTime::currentDateTime().toString("yyyy-MM");
+    QString context_info = QString("%1:%2:").arg(QString(context.file)).arg(context.line);
+    QString message = QString("%1 %2").arg(context_info).arg(msg);
+    QString current_date = QDateTime::currentDateTime().toString("yyyy-MM-dd");
 
     QFile file(current_date + "-log.txt");
     file.open(QIODevice::WriteOnly | QIODevice::Append);
@@ -46,12 +27,13 @@ void outputMessage(QtMsgType type, const QMessageLogContext &context, const QStr
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    qInstallMessageHandler(outputMessage);
+    FSCLOG << "\r\nstart";
+
     FSC_MainWindow w;
     w.setWindowFlags(Qt::WindowMinimizeButtonHint|Qt::WindowCloseButtonHint);
     w.show();
-
-    qInstallMessageHandler(outputMessage);
-    qDebug() << "\r\nstart";
 
     return a.exec();
 }
