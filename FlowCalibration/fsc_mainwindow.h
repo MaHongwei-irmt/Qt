@@ -6,29 +6,33 @@
 #include <QtNetwork>
 #include <QSignalMapper>
 
+QByteArray HexStringToByteArray(QString HexString);
+QString ByteArrayToHexString(QByteArray &ba);
+
+
 namespace Ui {
 class FSC_MainWindow;
 }
 
 #define FSCLOG  qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:zzz")
 
-#define SOCKET_NUMBER  16
+#define SOCKET_NUMBER  17
 
 #define SOCKET_PLC_INDEX       0
-#define SOCKET_SCALE_INDEX     1
-#define SOCKET_STD_FLOWM_INDEX  2
-#define SOCKET_FLOWM1_INDEX   3
-#define SOCKET_FLOWM2_INDEX   4
-#define SOCKET_FLOWM3_INDEX   5
-#define SOCKET_FLOWM4_INDEX   6
-#define SOCKET_FLOWM5_INDEX   7
-#define SOCKET_FLOWM6_INDEX   8
-#define SOCKET_FLOWM7_INDEX   9
-#define SOCKET_FLOWM8_INDEX   10
-#define SOCKET_FLOWM9_INDEX   11
-#define SOCKET_FLOWM10_INDEX  12
-#define SOCKET_FLOWM11_INDEX  13
-#define SOCKET_FLOWM12_INDEX  14
+#define SOCKET_SCALE_INDEX     16
+#define SOCKET_STD_FLOWM_INDEX  15
+#define SOCKET_FLOWM1_INDEX   1
+#define SOCKET_FLOWM2_INDEX   2
+#define SOCKET_FLOWM3_INDEX   3
+#define SOCKET_FLOWM4_INDEX   4
+#define SOCKET_FLOWM5_INDEX   5
+#define SOCKET_FLOWM6_INDEX   6
+#define SOCKET_FLOWM7_INDEX   7
+#define SOCKET_FLOWM8_INDEX   8
+#define SOCKET_FLOWM9_INDEX   9
+#define SOCKET_FLOWM10_INDEX  10
+#define SOCKET_FLOWM11_INDEX  11
+#define SOCKET_FLOWM12_INDEX  12
 
 #define SOCKET_TCP_RETRY_CON_TIMEOUT    5
 
@@ -40,7 +44,9 @@ public:
     explicit FSC_MainWindow(QWidget *parent = nullptr);
     ~FSC_MainWindow();
 
-    bool sktConed[SOCKET_NUMBER];
+    bool        sktConed[SOCKET_NUMBER];
+    QByteArray  sktSendBuf[SOCKET_NUMBER];
+    QByteArray  sktSendRev[SOCKET_NUMBER];
 
 private slots:
 
@@ -53,9 +59,11 @@ private slots:
 
     void on_comboBox_SensorTypeName_currentIndexChanged(int index);
 
-    void sktScale_connect_suc(int i);
-    void sktScale_connect_dis(int i);
-    void sktScale_error(int i);
+    void skt_connect_suc(int i);
+    void skt_connect_dis(int i);
+    void skt_error(int i);
+    void skt_read(int i);
+
     void mainLoop();
 
 
@@ -67,8 +75,6 @@ private:
     void SocketInit(void);
 
     void PlotReplay(const QString &arg1);
-
-    QString ConnectQStringAndNum(QString str, int i);
 
     QSignalMapper * sktConMapper;
     QSignalMapper * sktDisconMapper;

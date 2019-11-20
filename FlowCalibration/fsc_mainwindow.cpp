@@ -26,6 +26,10 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui
     connect(mainLoopTimer, SIGNAL(timeout()), this, SLOT(mainLoop()));
     mainLoopTimer->start(100);
 }
+FSC_MainWindow::~FSC_MainWindow()
+{
+    delete ui;
+}
 
 void FSC_MainWindow::ParaInit(void)
 {
@@ -41,21 +45,22 @@ void FSC_MainWindow::ParaInit(void)
     }
 
     fsc_global::port_number[0] = 2100;
-    fsc_global::port_number[1] = 2100;
-    fsc_global::port_number[2] = 2100;
-    fsc_global::port_number[3] = 2100;
-    fsc_global::port_number[4] = 2100;
-    fsc_global::port_number[5] = 2100;
-    fsc_global::port_number[6] = 2100;
-    fsc_global::port_number[7] = 2100;
-    fsc_global::port_number[8] = 2100;
-    fsc_global::port_number[9] = 2100;
-    fsc_global::port_number[10] = 2100;
-    fsc_global::port_number[11] = 2100;
-    fsc_global::port_number[12] = 2100;
-    fsc_global::port_number[13] = 2100;
-    fsc_global::port_number[14] = 2100;
-    fsc_global::port_number[15] = 2100;
+    fsc_global::port_number[1] = 4001;
+    fsc_global::port_number[2] = 4002;
+    fsc_global::port_number[3] = 4003;
+    fsc_global::port_number[4] = 4004;
+    fsc_global::port_number[5] = 4005;
+    fsc_global::port_number[6] = 4006;
+    fsc_global::port_number[7] = 4007;
+    fsc_global::port_number[8] = 4008;
+    fsc_global::port_number[9] = 4009;
+    fsc_global::port_number[10] = 4010;
+    fsc_global::port_number[11] = 4011;
+    fsc_global::port_number[12] = 4012;
+    fsc_global::port_number[13] = 4013;
+    fsc_global::port_number[14] = 4014;
+    fsc_global::port_number[15] = 4015;
+    fsc_global::port_number[16] = 4016;
 
     FSCLOG << fsc_global::ip_PLC;
     FSCLOG << fsc_global::ip_RS_Server;
@@ -318,11 +323,15 @@ void FSC_MainWindow::SocketInit(void)
 
         connect(fsc_global::sktTcp[i], SIGNAL(error(QAbstractSocket::SocketError)), sktErrMapper, SLOT(map()));
         sktErrMapper->setMapping(fsc_global::sktTcp[i], i);
+
+        connect(fsc_global::sktTcp[i], SIGNAL(readyRead()), sktReadMapper, SLOT(map()));
+        sktReadMapper->setMapping(fsc_global::sktTcp[i], i);
     }
 
-    connect(sktConMapper, SIGNAL(mapped(int)), this, SLOT(sktScale_connect_suc(int)));
-    connect(sktDisconMapper, SIGNAL(mapped(int)), this, SLOT(sktScale_connect_dis(int)));
-    connect(sktErrMapper, SIGNAL(mapped(int)), this, SLOT(sktScale_error(int)));
+    connect(sktConMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_suc(int)));
+    connect(sktDisconMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_dis(int)));
+    connect(sktErrMapper, SIGNAL(mapped(int)), this, SLOT(skt_error(int)));
+    connect(sktReadMapper, SIGNAL(mapped(int)), this, SLOT(skt_read(int)));
 
     for (int i = 0; i < SOCKET_NUMBER; i++)
     {
@@ -334,11 +343,22 @@ void FSC_MainWindow::SocketInit(void)
 
 void FSC_MainWindow::mainLoop()
 {
-    static int j = 1;
+    static int j = 0;
+
+    j++;
+
+    if (j % 10 == 0)
+    {
+        sktSendBuf[SOCKET_FLOWM1_INDEX].resize(2);
+        sktSendBuf[SOCKET_FLOWM1_INDEX][0]=0x1B;
+        sktSendBuf[SOCKET_FLOWM1_INDEX][1]=0x70;
+
+        if (sktConed[SOCKET_FLOWM1_INDEX]) fsc_global::sktTcp[SOCKET_FLOWM1_INDEX]->write(sktSendBuf[SOCKET_FLOWM1_INDEX]);
+    }
 
     for (int i = 0; i < SOCKET_NUMBER; i++)
     {
-        if (sktConed[i] == false &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+        if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
         {
 
             fsc_global::sktTcp[i]->abort();
@@ -347,20 +367,26 @@ void FSC_MainWindow::mainLoop()
             sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
 
 
-            FSCLOG << QString::number(i) << "socket con retry";
+            FSCLOG << QString::number(i) << " socket con retry";
         }
     }
 
-    j++;
 }
 
-void FSC_MainWindow::sktScale_connect_suc(int i)
+void FSC_MainWindow::skt_read(int i)
+{
+    sktSendRev[i] = fsc_global::sktTcp[i]->readAll();
+
+    FSCLOG << "Socket read: " + QString::number(i) + " " + QString::number(sktSendRev[i].size()) + " " + ByteArrayToHexString(sktSendRev[i]);
+}
+
+void FSC_MainWindow::skt_connect_suc(int i)
 {
     sktConed[i] = true;
-    FSCLOG << QString::number(i) + "socket con";
+    FSCLOG << QString::number(i) + " socket con";
 }
 
-void FSC_MainWindow::sktScale_connect_dis(int i)
+void FSC_MainWindow::skt_connect_dis(int i)
 {
     fsc_global::sktTcp[i]->abort();
 
@@ -368,12 +394,13 @@ void FSC_MainWindow::sktScale_connect_dis(int i)
     fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
     sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
 
-    FSCLOG << QString::number(i) << "socket discon - recon";
+    FSCLOG << QString::number(i) << " socket discon - recon";
 }
 
-void FSC_MainWindow::sktScale_error(int i)
+void FSC_MainWindow::skt_error(int i)
 {
-    FSCLOG << "info Socket: " + QString::number(i) + " " + fsc_global::sktTcp[i]->QAbstractSocket::peerAddress().toString() + "  " + fsc_global::sktTcp[i]->errorString();
+    FSCLOG << "info Socket: " + QString::number(i) + " " + fsc_global::sktTcp[i]->QAbstractSocket::peerAddress().toString()\
+              + "  " + fsc_global::sktTcp[i]->errorString();
 }
 
 void FSC_MainWindow::PlotReplay(const QString &arg1)
@@ -557,18 +584,6 @@ void FSC_MainWindow::PlotReplay(const QString &arg1)
     //-------------------------------------------------------------------
 }
 
-QString FSC_MainWindow::ConnectQStringAndNum(QString str, int i)//给定一个字符串和一个数字，把他俩连起来。
-{
-    QString str_i;
-    str_i.sprintf("%d",i);
-    return(str+str_i);
-}
-
-FSC_MainWindow::~FSC_MainWindow()
-{
-    delete ui;
-}
-
 
 void FSC_MainWindow::on_tbnSysDevCheck_clicked()
 {
@@ -607,7 +622,6 @@ void FSC_MainWindow::on_tbnSysDevCheck_clicked()
 void FSC_MainWindow::on_tbnManualCheckDev_clicked()
 {
     Dialog_CheckDev *ChkDev = new Dialog_CheckDev();
-
     ChkDev->exec();
 }
 
@@ -615,7 +629,6 @@ void FSC_MainWindow::on_comboBox_PlotSenSel_currentIndexChanged(const QString &a
 {
     PlotReplay(arg1);
 }
-
 
 void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
 {
@@ -633,8 +646,6 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
     ui->checkBox_20SpanCal->setChecked(fsc_global::para_ini.at(index).span_20_cal);
     ui->checkBox_10SpanCal->setChecked(fsc_global::para_ini.at(index).span_10_cal);
 
-
-
     ui->checkBox_100SpanCheck->setChecked(fsc_global::para_ini.at(index).span_100_check);
     ui->checkBox_90SpanCheck->setChecked(fsc_global::para_ini.at(index).span_90_check);
     ui->checkBox_80SpanCheck->setChecked(fsc_global::para_ini.at(index).span_80_check);
@@ -646,9 +657,6 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
     ui->checkBox_20SpanCheck->setChecked(fsc_global::para_ini.at(index).span_20_check);
     ui->checkBox_10SpanCheck->setChecked(fsc_global::para_ini.at(index).span_10_check);
 
-
-
-
     ui->checkBox_100SpanModify->setChecked(fsc_global::para_ini.at(index).span_100_correct);
     ui->checkBox_90SpanModify->setChecked(fsc_global::para_ini.at(index).span_90_correct);
     ui->checkBox_80SpanModify->setChecked(fsc_global::para_ini.at(index).span_80_correct);
@@ -659,5 +667,8 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
     ui->checkBox_30SpanModify->setChecked(fsc_global::para_ini.at(index).span_30_correct);
     ui->checkBox_20SpanModify->setChecked(fsc_global::para_ini.at(index).span_20_correct);
     ui->checkBox_10SpanModify->setChecked(fsc_global::para_ini.at(index).span_10_correct);
+
 }
+
+
 

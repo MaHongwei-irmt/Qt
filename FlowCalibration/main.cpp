@@ -2,6 +2,21 @@
 #include "FCMainWindow.h"
 #include <QApplication>
 
+void outputMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg);
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    qInstallMessageHandler(outputMessage);
+    FSCLOG << "\r\nstart";
+
+    FSC_MainWindow w;
+    w.setWindowFlags(Qt::WindowMinimizeButtonHint|Qt::WindowCloseButtonHint);
+    w.show();
+
+    return a.exec();
+}
 
 void outputMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
@@ -23,18 +38,42 @@ void outputMessage(QtMsgType type, const QMessageLogContext &context, const QStr
     mutex.unlock();
 }
 
-
-int main(int argc, char *argv[])
+QByteArray HexStringToByteArray(QString HexString)
 {
-    QApplication a(argc, argv);
+    bool ok;
+    QByteArray ret;
 
-    qInstallMessageHandler(outputMessage);
-    FSCLOG << "\r\nstart";
+    HexString = HexString.trimmed();
+    HexString = HexString.simplified();
 
-    FSC_MainWindow w;
-    w.setWindowFlags(Qt::WindowMinimizeButtonHint|Qt::WindowCloseButtonHint);
-    w.show();
+    QStringList sl = HexString.split(" ");
 
-    return a.exec();
+    foreach (QString s, sl)
+    {
+        if(!s.isEmpty())
+        {
+            char c = static_cast<char> (s.toInt(&ok, 16) & 0xFF);
+
+            if(ok)
+            {
+                ret.append(c);
+            }
+        }
+    }
+    return ret;
 }
 
+QString ByteArrayToHexString(QByteArray &ba)
+{
+    QDataStream out(&ba, QIODevice::ReadWrite);
+    QString buf;
+
+    while(!out.atEnd())
+    {
+        qint8 outChar = 0;
+        out >> outChar;
+        QString str = QString("%1").arg(outChar&0xFF,2,16,QLatin1Char('0')).toUpper() + QString(" ");
+        buf += str;
+    }
+    return buf;
+}
