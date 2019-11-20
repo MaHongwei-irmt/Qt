@@ -8,18 +8,17 @@
 
 
 
-QVector <fsc_para_ini> fsc_global::para_ini;
-QTcpSocket* fsc_global::sktTcp[SOCKET_NUMBER];
-QString    fsc_global::ip_PLC;
-QString    fsc_global::ip_RS_Server;
-int fsc_global::port_number[SOCKET_NUMBER];
+QVector <fsc_para_ini>  fsc_global::para_ini;
+QTcpSocket*             fsc_global::sktTcp[SOCKET_NUMBER];
+QString                 fsc_global::ip_PLC;
+QString                 fsc_global::ip_RS_Server;
+quint16                 fsc_global::port_number[SOCKET_NUMBER];
+QString                 fsc_global::ip[SOCKET_NUMBER];
 
 
 
-FSC_MainWindow::FSC_MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    mainTimer(new QTimer(this)),
-    ui(new Ui::FSC_MainWindow)
+FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::FSC_MainWindow),
+    mainTimer(new QTimer(this))
 {
     ui->setupUi(this);
 
@@ -70,37 +69,17 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) :
     connect(sktErrMapper, SIGNAL(mapped(int)), this, SLOT(sktScale_error(int)));
 
 
-    sktConed[0] = false;
-    fsc_global::sktTcp[0]->connectToHost(QHostAddress(fsc_global::ip_PLC), fsc_global::port_number[0]);
-
-    QDateTime time = QDateTime::currentDateTime();   //获取当前时间
-
-    sktConCommandTime[0] = time.toTime_t();   //将当前时间转为时间戳
-
-    for (int i = 1; i < SOCKET_NUMBER; i++)
+    for (int i = 0; i < SOCKET_NUMBER; i++)
     {
         sktConed[i] = false;
-        fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip_RS_Server), fsc_global::port_number[i]);
-
-
-        time = QDateTime::currentDateTime();
-        sktConCommandTime[i] = time.toTime_t();
+        fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
+        sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
     }
-
-
-
 
 //-------------------------------------------------------------------
 
-    ui->lineEdit_scale_show->setAlignment(Qt::AlignRight);
-
-
-    connect(ui->lineEdit_scale_show_1,SIGNAL(clicked(bool)),this,SLOT(on_tbnSysDevCheck_clicked()));
-
-    connect(mainTimer,SIGNAL(timeout()),this,SLOT(mainTimerUpdate()));
-
-
-    mainTimer->start(1000);
+    connect(mainTimer, SIGNAL(timeout()), this, SLOT(mainTimerUpdate()));
+    mainTimer->start(100);
 
 }
 
@@ -108,33 +87,27 @@ void FSC_MainWindow::mainTimerUpdate()
 {
     static int j = 1;
 
-    if(j % 5 == 0)
+    for (int i = 0; i < SOCKET_NUMBER; i++)
     {
-        for (int i = 0; i < SOCKET_NUMBER; i++)
+        if (sktConed[i] == false &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
         {
-            if (sktConed[i] == false)
-            {
 
-                fsc_global::sktTcp[i]->abort();
-                fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip_RS_Server), fsc_global::port_number[i]);
+            fsc_global::sktTcp[i]->abort();
+
+            fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
+            sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
 
 
-                qDebug() << QString::number(i);
-            }
+            qDebug() << QDateTime::currentDateTime() << QString::number(i) << "socket con retry";
         }
     }
 
-
-
-
-
     j++;
-
 }
 
 void FSC_MainWindow::sktScale_connect_suc(int i)
 {
-    QMessageBox::information(this, "show", QString::number(i) + " con");
+     qDebug() << QDateTime::currentDateTime() << QString::number(i) + "socket con";
 
     sktConed[i] = true;
 
@@ -142,34 +115,23 @@ void FSC_MainWindow::sktScale_connect_suc(int i)
 
 void FSC_MainWindow::sktScale_connect_dis(int i)
 {
-    QMessageBox::information(this, "show",  QString::number(i) + " discon");
+    qDebug() << QDateTime::currentDateTime() << QString::number(i) + "socket discon";
 
     fsc_global::sktTcp[i]->abort();
 
-    fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip_RS_Server), fsc_global::port_number[i]);
-
     sktConed[i] = false;
+    fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
+    sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
+
+    qDebug() << QDateTime::currentDateTime() << QString::number(i) << "socket disc - recon";
 
 }
 
-void FSC_MainWindow::sktScale_error(QAbstractSocket::SocketError, int i)
+void FSC_MainWindow::sktScale_error(int i)
 {
-        QMessageBox::information(this, "show", "err");
 
-    switch(fsc_global::sktTcp[i]->error())
-    {
-//        case QAbstractSocket::RemoteHostClosedError://客户端断开
-//            {
-//                QString hostAddress = fsc_global::sktScale->QAbstractSocket::peerAddress().toString();
-//                ui->m_display->insertPlainText(tr("客户端[%1]断开连接\r\n").arg(hostAddress));
-//                break;
-//            }
-        default:
-            {
-                QMessageBox::information(this, "show", fsc_global::sktTcp[SOCKET_SCALE_INDEX]->errorString());
-                break;
-            }
-    }
+    qDebug() << QDateTime::currentDateTime() << "info Socket: " + QString::number(i) + " " + fsc_global::sktTcp[i]->QAbstractSocket::peerAddress().toString() + "  " + fsc_global::sktTcp[i]->errorString();
+
 }
 
 
@@ -181,28 +143,51 @@ void FSC_MainWindow::ParaInit()
     fsc_global::ip_PLC = configIni->value("IP_ADDRESS/PLC" ).toString();
     fsc_global::ip_RS_Server = configIni->value("IP_ADDRESS/RS_SERVER" ).toString();
 
+    fsc_global::ip[0] = fsc_global::ip_PLC;
+    for (int i = 1; i < SOCKET_NUMBER; i++)
+    {
+          fsc_global::ip[i] = fsc_global::ip_RS_Server;
+    }
 
-    fsc_global::port_number[0] = 5200;
+    fsc_global::port_number[0] = 2100;
     fsc_global::port_number[1] = 2100;
-    fsc_global::port_number[2] = 4000;
-    fsc_global::port_number[3] = 40010;
-    fsc_global::port_number[4] = 4002;
-    fsc_global::port_number[5] = 4003;
-    fsc_global::port_number[6] = 4004;
-    fsc_global::port_number[7] = 4005;
-    fsc_global::port_number[8] = 4006;
-    fsc_global::port_number[9] = 4007;
-    fsc_global::port_number[10] = 4008;
-    fsc_global::port_number[11] = 4009;
-    fsc_global::port_number[12] = 4010;
-    fsc_global::port_number[13] = 4011;
-    fsc_global::port_number[14] = 4012;
-    fsc_global::port_number[15] = 4013;
+    fsc_global::port_number[2] = 2100;
+    fsc_global::port_number[3] = 2100;
+    fsc_global::port_number[4] = 2100;
+    fsc_global::port_number[5] = 2100;
+    fsc_global::port_number[6] = 2100;
+    fsc_global::port_number[7] = 2100;
+    fsc_global::port_number[8] = 2100;
+    fsc_global::port_number[9] = 2100;
+    fsc_global::port_number[10] = 2100;
+    fsc_global::port_number[11] = 2100;
+    fsc_global::port_number[12] = 2100;
+    fsc_global::port_number[13] = 2100;
+    fsc_global::port_number[14] = 2100;
+    fsc_global::port_number[15] = 2100;
+
+
+//    fsc_global::port_number[0] = 5200;
+//    fsc_global::port_number[1] = 2100;
+//    fsc_global::port_number[2] = 4000;
+//    fsc_global::port_number[3] = 40010;
+//    fsc_global::port_number[4] = 4002;
+//    fsc_global::port_number[5] = 4003;
+//    fsc_global::port_number[6] = 4004;
+//    fsc_global::port_number[7] = 4005;
+//    fsc_global::port_number[8] = 4006;
+//    fsc_global::port_number[9] = 4007;
+//    fsc_global::port_number[10] = 4008;
+//    fsc_global::port_number[11] = 4009;
+//    fsc_global::port_number[12] = 4010;
+//    fsc_global::port_number[13] = 4011;
+//    fsc_global::port_number[14] = 4012;
+//    fsc_global::port_number[15] = 4013;
 
 
 
-    qDebug() << fsc_global::ip_PLC;
-    qDebug() << fsc_global::ip_RS_Server;
+    qDebug()<< QDateTime::currentDateTime() << fsc_global::ip_PLC;
+    qDebug()<< QDateTime::currentDateTime() << fsc_global::ip_RS_Server;
 
 
     int i = 1;
@@ -214,13 +199,13 @@ void FSC_MainWindow::ParaInit()
     {
 
         tmp.type_name = configIni->value( "sensor_type_" + QString::number(i) +"/type_name" ).toString();
-        qDebug() << tmp.type_name;
+        qDebug() << QDateTime::currentDateTime() << tmp.type_name;
 
 
 
 
 
-        tmp.span_ml_per_min = configIni->value( "sensor_type_" + QString::number(i) +"/span_ml_per_min" ).toFloat();
+        tmp.span_ml_per_min = configIni->value( "sensor_type_" + QString::number(i) +"/span_ml_per_min" ).toDouble();
 
         tmp.span_100_cal = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_position_to_be_calibrate" ).toBool();
         tmp.span_90_cal = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_position_to_be_calibrate" ).toBool();
@@ -456,9 +441,11 @@ void FSC_MainWindow::PlotInit()
 }
 
 
-void FSC_MainWindow::PlotReplay()
+void FSC_MainWindow::PlotReplay(const QString &arg1)
 {
     //---------------------------曲线-----------------------------
+        qDebug() << QDateTime::currentDateTime()  << arg1;
+
         int iGraphIndex = 0;
 
 
@@ -691,7 +678,7 @@ void FSC_MainWindow::on_tbnManualCheckDev_clicked()
 
 void FSC_MainWindow::on_comboBox_PlotSenSel_currentIndexChanged(const QString &arg1)
 {
-    PlotReplay();
+    PlotReplay(arg1);
 }
 
 

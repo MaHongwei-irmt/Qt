@@ -30,6 +30,7 @@ class FSC_MainWindow;
 #define SOCKET_FLOWM11_INDEX  13
 #define SOCKET_FLOWM12_INDEX  14
 
+#define SOCKET_TCP_RETRY_CON_TIMEOUT    5
 
 class FSC_MainWindow : public QMainWindow
 {
@@ -54,7 +55,7 @@ private slots:
 
     void sktScale_connect_suc(int i);
     void sktScale_connect_dis(int i);
-    void sktScale_error(QAbstractSocket::SocketError, int i);
+    void sktScale_error(int i);
     void mainTimerUpdate();
 
 
@@ -63,7 +64,7 @@ private:
 
     void ParaInit();
     void PlotInit();
-    void PlotReplay();
+    void PlotReplay(const QString &arg1);
 
     QString ConnectQStringAndNum(QString str, int i);
 
@@ -74,7 +75,7 @@ private:
 
     QTimer           *mainTimer         = nullptr;
 
-    int sktConCommandTime[SOCKET_NUMBER];
+    uint sktConCommandTime[SOCKET_NUMBER];
 
 
 };
@@ -86,7 +87,7 @@ class fsc_para_ini
 
     QString type_name;
 
-    float span_ml_per_min;
+    double span_ml_per_min;
 
     bool span_100_cal;
     bool span_90_cal;
@@ -146,7 +147,9 @@ public:
     static QTcpSocket *sktTcp[SOCKET_NUMBER];
     static QString ip_PLC;
     static QString ip_RS_Server;
-    static int port_number[SOCKET_NUMBER];
+    static quint16 port_number[SOCKET_NUMBER];
+    static QString ip[SOCKET_NUMBER];
+
 };
 
 

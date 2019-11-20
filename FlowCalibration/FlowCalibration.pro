@@ -26,29 +26,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        FCMainWindow.cpp \
     qcustomplot.cpp \
-    FCAddress.cpp \
     fsc_mainwindow.cpp \
     dialog_checkdev.cpp \
     dialog_sensoraddr.cpp
 
 HEADERS += \
-        FCMainWindow.h \
     qcustomplot.h \
-    FCAddress.h \
     fsc_mainwindow.h \
     dialog_checkdev.h \
     dialog_sensoraddr.h
 
 FORMS += \
-        FCMainWindow.ui \
-    FCAddress.ui \
     fsc_mainwindow.ui \
     dialog_checkdev.ui \
     dialog_sensoraddr.ui
 
 RC_ICONS = FCImage.ico
 
-RESOURCES += \
-    image.qrc
+RESOURCES +=
