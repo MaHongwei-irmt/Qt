@@ -17,6 +17,7 @@ QString                 fsc_global::ip[SOCKET_NUMBER];
 
 
 
+
 FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::FSC_MainWindow),
     mainTimer(new QTimer(this))
 {

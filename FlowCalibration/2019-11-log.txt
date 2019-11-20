@@ -1,0 +1,416 @@
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:56.980 中国标准时间 Qt::TimeSpec(LocalTime)) "2socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:56.983 中国标准时间 Qt::TimeSpec(LocalTime)) "1socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:56.986 中国标准时间 Qt::TimeSpec(LocalTime)) "13socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:56.988 中国标准时间 Qt::TimeSpec(LocalTime)) "5socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:56.991 中国标准时间 Qt::TimeSpec(LocalTime)) "14socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:56.994 中国标准时间 Qt::TimeSpec(LocalTime)) "3socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:56.998 中国标准时间 Qt::TimeSpec(LocalTime)) "4socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:57.001 中国标准时间 Qt::TimeSpec(LocalTime)) "9socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:57.004 中国标准时间 Qt::TimeSpec(LocalTime)) "12socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:57.007 中国标准时间 Qt::TimeSpec(LocalTime)) "6socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:57.009 中国标准时间 Qt::TimeSpec(LocalTime)) "8socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:57.013 中国标准时间 Qt::TimeSpec(LocalTime)) "7socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:57.016 中国标准时间 Qt::TimeSpec(LocalTime)) "15socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:57.019 中国标准时间 Qt::TimeSpec(LocalTime)) "10socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:38:57.022 中国标准时间 Qt::TimeSpec(LocalTime)) "11socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:02.026 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:08.036 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:14.051 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:20.070 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:26.088 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:32.102 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:38.008 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:44.020 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:50.039 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:39:56.056 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:02.069 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:08.082 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:14.099 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:20.005 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:26.023 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:32.035 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:38.054 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:44.068 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:50.086 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:40:56.100 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:41:02.006 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.059 中国标准时间 Qt::TimeSpec(LocalTime)) "4socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.063 中国标准时间 Qt::TimeSpec(LocalTime)) "7socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.067 中国标准时间 Qt::TimeSpec(LocalTime)) "12socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.071 中国标准时间 Qt::TimeSpec(LocalTime)) "2socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.075 中国标准时间 Qt::TimeSpec(LocalTime)) "10socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.078 中国标准时间 Qt::TimeSpec(LocalTime)) "8socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.082 中国标准时间 Qt::TimeSpec(LocalTime)) "14socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.085 中国标准时间 Qt::TimeSpec(LocalTime)) "13socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.089 中国标准时间 Qt::TimeSpec(LocalTime)) "6socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.092 中国标准时间 Qt::TimeSpec(LocalTime)) "11socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.096 中国标准时间 Qt::TimeSpec(LocalTime)) "1socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.099 中国标准时间 Qt::TimeSpec(LocalTime)) "15socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.103 中国标准时间 Qt::TimeSpec(LocalTime)) "9socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.107 中国标准时间 Qt::TimeSpec(LocalTime)) "3socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:09.111 中国标准时间 Qt::TimeSpec(LocalTime)) "5socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:41:14.099 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:41:20.005 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.522 中国标准时间 Qt::TimeSpec(LocalTime)) "10socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.526 中国标准时间 Qt::TimeSpec(LocalTime)) "7socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.530 中国标准时间 Qt::TimeSpec(LocalTime)) "9socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.534 中国标准时间 Qt::TimeSpec(LocalTime)) "11socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.538 中国标准时间 Qt::TimeSpec(LocalTime)) "6socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.542 中国标准时间 Qt::TimeSpec(LocalTime)) "3socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.545 中国标准时间 Qt::TimeSpec(LocalTime)) "15socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.549 中国标准时间 Qt::TimeSpec(LocalTime)) "8socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.554 中国标准时间 Qt::TimeSpec(LocalTime)) "14socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.558 中国标准时间 Qt::TimeSpec(LocalTime)) "4socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.562 中国标准时间 Qt::TimeSpec(LocalTime)) "1socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.565 中国标准时间 Qt::TimeSpec(LocalTime)) "12socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.571 中国标准时间 Qt::TimeSpec(LocalTime)) "5socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.575 中国标准时间 Qt::TimeSpec(LocalTime)) "2socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:41:50.578 中国标准时间 Qt::TimeSpec(LocalTime)) "13socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:41:56.005 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(main.cpp) Line:(54) start
+
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.063 中国标准时间 Qt::TimeSpec(LocalTime)) "9socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.068 中国标准时间 Qt::TimeSpec(LocalTime)) "12socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.072 中国标准时间 Qt::TimeSpec(LocalTime)) "6socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.075 中国标准时间 Qt::TimeSpec(LocalTime)) "11socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.078 中国标准时间 Qt::TimeSpec(LocalTime)) "7socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.082 中国标准时间 Qt::TimeSpec(LocalTime)) "10socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.086 中国标准时间 Qt::TimeSpec(LocalTime)) "15socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.090 中国标准时间 Qt::TimeSpec(LocalTime)) "3socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.093 中国标准时间 Qt::TimeSpec(LocalTime)) "1socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.098 中国标准时间 Qt::TimeSpec(LocalTime)) "5socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.102 中国标准时间 Qt::TimeSpec(LocalTime)) "13socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.105 中国标准时间 Qt::TimeSpec(LocalTime)) "4socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.109 中国标准时间 Qt::TimeSpec(LocalTime)) "8socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.111 中国标准时间 Qt::TimeSpec(LocalTime)) "14socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:43:16.115 中国标准时间 Qt::TimeSpec(LocalTime)) "2socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:43:21.098 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:43:27.006 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:43:33.023 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:43:39.035 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:43:45.055 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:43:51.070 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:43:57.082 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(main.cpp) Line:(54) 
+start
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.188 中国标准时间 Qt::TimeSpec(LocalTime)) "7socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.191 中国标准时间 Qt::TimeSpec(LocalTime)) "4socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.195 中国标准时间 Qt::TimeSpec(LocalTime)) "13socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.199 中国标准时间 Qt::TimeSpec(LocalTime)) "15socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.203 中国标准时间 Qt::TimeSpec(LocalTime)) "1socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.206 中国标准时间 Qt::TimeSpec(LocalTime)) "5socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.210 中国标准时间 Qt::TimeSpec(LocalTime)) "8socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.213 中国标准时间 Qt::TimeSpec(LocalTime)) "2socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.218 中国标准时间 Qt::TimeSpec(LocalTime)) "9socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.221 中国标准时间 Qt::TimeSpec(LocalTime)) "10socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.225 中国标准时间 Qt::TimeSpec(LocalTime)) "14socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.228 中国标准时间 Qt::TimeSpec(LocalTime)) "3socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.232 中国标准时间 Qt::TimeSpec(LocalTime)) "11socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.236 中国标准时间 Qt::TimeSpec(LocalTime)) "6socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(111) QDateTime(2019-11-20 11:44:14.240 中国标准时间 Qt::TimeSpec(LocalTime)) "12socket con"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:44:19.006 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:44:25.022 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:44:31.037 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:44:37.056 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:44:43.068 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:44:49.082 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:44:55.102 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:01.004 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:07.020 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:13.036 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:19.051 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:25.069 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:31.082 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:37.101 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:43.005 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:49.019 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:45:55.035 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:01.056 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:07.066 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:13.082 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:19.099 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:25.004 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:31.022 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:37.035 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:43.054 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:49.069 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:46:55.085 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:01.099 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:07.004 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.003 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.009 中国标准时间 Qt::TimeSpec(LocalTime)) "15socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.015 中国标准时间 Qt::TimeSpec(LocalTime)) "15" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.019 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.023 中国标准时间 Qt::TimeSpec(LocalTime)) "14socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.028 中国标准时间 Qt::TimeSpec(LocalTime)) "14" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.031 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.034 中国标准时间 Qt::TimeSpec(LocalTime)) "13socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.038 中国标准时间 Qt::TimeSpec(LocalTime)) "13" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.042 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.046 中国标准时间 Qt::TimeSpec(LocalTime)) "12socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.050 中国标准时间 Qt::TimeSpec(LocalTime)) "12" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.053 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.057 中国标准时间 Qt::TimeSpec(LocalTime)) "11socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.062 中国标准时间 Qt::TimeSpec(LocalTime)) "11" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.066 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.069 中国标准时间 Qt::TimeSpec(LocalTime)) "10socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.074 中国标准时间 Qt::TimeSpec(LocalTime)) "10" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.078 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.082 中国标准时间 Qt::TimeSpec(LocalTime)) "9socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.086 中国标准时间 Qt::TimeSpec(LocalTime)) "9" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.089 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.093 中国标准时间 Qt::TimeSpec(LocalTime)) "8socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.097 中国标准时间 Qt::TimeSpec(LocalTime)) "8" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.101 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.105 中国标准时间 Qt::TimeSpec(LocalTime)) "7socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.109 中国标准时间 Qt::TimeSpec(LocalTime)) "7" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.114 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.117 中国标准时间 Qt::TimeSpec(LocalTime)) "6socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.121 中国标准时间 Qt::TimeSpec(LocalTime)) "6" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.125 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.129 中国标准时间 Qt::TimeSpec(LocalTime)) "5socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.133 中国标准时间 Qt::TimeSpec(LocalTime)) "5" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.136 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.140 中国标准时间 Qt::TimeSpec(LocalTime)) "4socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.159 中国标准时间 Qt::TimeSpec(LocalTime)) "4" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.163 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.167 中国标准时间 Qt::TimeSpec(LocalTime)) "3socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.170 中国标准时间 Qt::TimeSpec(LocalTime)) "3" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.174 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.178 中国标准时间 Qt::TimeSpec(LocalTime)) "2socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.182 中国标准时间 Qt::TimeSpec(LocalTime)) "2" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:09.186 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1 127.0.0.1  The remote host closed the connection"
+Debug: File:(fsc_mainwindow.cpp) Line:(119) QDateTime(2019-11-20 11:47:09.189 中国标准时间 Qt::TimeSpec(LocalTime)) "1socket discon"
+Debug: File:(fsc_mainwindow.cpp) Line:(127) QDateTime(2019-11-20 11:47:09.194 中国标准时间 Qt::TimeSpec(LocalTime)) "1" socket disc - recon
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.017 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.033 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.041 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.054 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.067 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.081 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.088 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.101 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.113 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.124 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.139 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.163 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.176 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.188 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:11.196 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:13.022 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.102 中国标准时间 Qt::TimeSpec(LocalTime)) "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.117 中国标准时间 Qt::TimeSpec(LocalTime)) "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.125 中国标准时间 Qt::TimeSpec(LocalTime)) "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.131 中国标准时间 Qt::TimeSpec(LocalTime)) "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.143 中国标准时间 Qt::TimeSpec(LocalTime)) "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.148 中国标准时间 Qt::TimeSpec(LocalTime)) "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.152 中国标准时间 Qt::TimeSpec(LocalTime)) "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.155 中国标准时间 Qt::TimeSpec(LocalTime)) "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.160 中国标准时间 Qt::TimeSpec(LocalTime)) "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.175 中国标准时间 Qt::TimeSpec(LocalTime)) "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.180 中国标准时间 Qt::TimeSpec(LocalTime)) "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.184 中国标准时间 Qt::TimeSpec(LocalTime)) "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.188 中国标准时间 Qt::TimeSpec(LocalTime)) "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.193 中国标准时间 Qt::TimeSpec(LocalTime)) "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:15.197 中国标准时间 Qt::TimeSpec(LocalTime)) "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.110 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.125 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.132 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.141 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.147 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.160 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.171 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.175 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.191 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.195 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.199 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.202 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.206 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.222 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:17.226 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:19.035 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.004 中国标准时间 Qt::TimeSpec(LocalTime)) "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.011 中国标准时间 Qt::TimeSpec(LocalTime)) "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.015 中国标准时间 Qt::TimeSpec(LocalTime)) "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.019 中国标准时间 Qt::TimeSpec(LocalTime)) "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.023 中国标准时间 Qt::TimeSpec(LocalTime)) "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.027 中国标准时间 Qt::TimeSpec(LocalTime)) "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.040 中国标准时间 Qt::TimeSpec(LocalTime)) "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.044 中国标准时间 Qt::TimeSpec(LocalTime)) "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.048 中国标准时间 Qt::TimeSpec(LocalTime)) "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.052 中国标准时间 Qt::TimeSpec(LocalTime)) "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.056 中国标准时间 Qt::TimeSpec(LocalTime)) "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.061 中国标准时间 Qt::TimeSpec(LocalTime)) "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.065 中国标准时间 Qt::TimeSpec(LocalTime)) "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.068 中国标准时间 Qt::TimeSpec(LocalTime)) "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:21.072 中国标准时间 Qt::TimeSpec(LocalTime)) "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.010 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.019 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.023 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.027 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.031 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.035 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.044 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.050 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.054 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.061 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.065 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.069 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.072 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.077 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:23.080 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:25.051 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.021 中国标准时间 Qt::TimeSpec(LocalTime)) "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.026 中国标准时间 Qt::TimeSpec(LocalTime)) "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.030 中国标准时间 Qt::TimeSpec(LocalTime)) "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.034 中国标准时间 Qt::TimeSpec(LocalTime)) "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.038 中国标准时间 Qt::TimeSpec(LocalTime)) "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.042 中国标准时间 Qt::TimeSpec(LocalTime)) "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.046 中国标准时间 Qt::TimeSpec(LocalTime)) "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.050 中国标准时间 Qt::TimeSpec(LocalTime)) "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.065 中国标准时间 Qt::TimeSpec(LocalTime)) "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.069 中国标准时间 Qt::TimeSpec(LocalTime)) "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.074 中国标准时间 Qt::TimeSpec(LocalTime)) "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.078 中国标准时间 Qt::TimeSpec(LocalTime)) "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.082 中国标准时间 Qt::TimeSpec(LocalTime)) "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.086 中国标准时间 Qt::TimeSpec(LocalTime)) "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:27.090 中国标准时间 Qt::TimeSpec(LocalTime)) "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.028 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.032 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.036 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.041 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.045 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.049 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.068 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.072 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.076 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.080 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.097 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.111 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.115 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.118 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:29.128 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:31.070 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.035 中国标准时间 Qt::TimeSpec(LocalTime)) "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.040 中国标准时间 Qt::TimeSpec(LocalTime)) "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.044 中国标准时间 Qt::TimeSpec(LocalTime)) "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.049 中国标准时间 Qt::TimeSpec(LocalTime)) "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.053 中国标准时间 Qt::TimeSpec(LocalTime)) "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.057 中国标准时间 Qt::TimeSpec(LocalTime)) "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.065 中国标准时间 Qt::TimeSpec(LocalTime)) "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.069 中国标准时间 Qt::TimeSpec(LocalTime)) "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.081 中国标准时间 Qt::TimeSpec(LocalTime)) "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.085 中国标准时间 Qt::TimeSpec(LocalTime)) "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.089 中国标准时间 Qt::TimeSpec(LocalTime)) "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.094 中国标准时间 Qt::TimeSpec(LocalTime)) "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.098 中国标准时间 Qt::TimeSpec(LocalTime)) "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.102 中国标准时间 Qt::TimeSpec(LocalTime)) "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:33.112 中国标准时间 Qt::TimeSpec(LocalTime)) "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.037 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.051 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.056 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.066 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.070 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.073 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.077 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.081 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.085 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.088 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.093 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.096 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.111 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.115 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:35.122 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:37.085 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.050 中国标准时间 Qt::TimeSpec(LocalTime)) "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.055 中国标准时间 Qt::TimeSpec(LocalTime)) "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.059 中国标准时间 Qt::TimeSpec(LocalTime)) "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.063 中国标准时间 Qt::TimeSpec(LocalTime)) "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.067 中国标准时间 Qt::TimeSpec(LocalTime)) "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.081 中国标准时间 Qt::TimeSpec(LocalTime)) "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.085 中国标准时间 Qt::TimeSpec(LocalTime)) "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.090 中国标准时间 Qt::TimeSpec(LocalTime)) "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.094 中国标准时间 Qt::TimeSpec(LocalTime)) "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.098 中国标准时间 Qt::TimeSpec(LocalTime)) "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.102 中国标准时间 Qt::TimeSpec(LocalTime)) "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.112 中国标准时间 Qt::TimeSpec(LocalTime)) "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.128 中国标准时间 Qt::TimeSpec(LocalTime)) "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.133 中国标准时间 Qt::TimeSpec(LocalTime)) "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:39.137 中国标准时间 Qt::TimeSpec(LocalTime)) "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.053 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.058 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.062 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.068 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.073 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.084 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.088 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.093 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.096 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.101 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.105 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.116 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.133 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.141 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:41.145 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:43.102 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.066 中国标准时间 Qt::TimeSpec(LocalTime)) "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.071 中国标准时间 Qt::TimeSpec(LocalTime)) "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.077 中国标准时间 Qt::TimeSpec(LocalTime)) "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.083 中国标准时间 Qt::TimeSpec(LocalTime)) "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.087 中国标准时间 Qt::TimeSpec(LocalTime)) "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.092 中国标准时间 Qt::TimeSpec(LocalTime)) "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.097 中国标准时间 Qt::TimeSpec(LocalTime)) "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.101 中国标准时间 Qt::TimeSpec(LocalTime)) "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.105 中国标准时间 Qt::TimeSpec(LocalTime)) "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.110 中国标准时间 Qt::TimeSpec(LocalTime)) "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.114 中国标准时间 Qt::TimeSpec(LocalTime)) "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.118 中国标准时间 Qt::TimeSpec(LocalTime)) "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.122 中国标准时间 Qt::TimeSpec(LocalTime)) "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.127 中国标准时间 Qt::TimeSpec(LocalTime)) "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:45.131 中国标准时间 Qt::TimeSpec(LocalTime)) "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.067 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.074 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.084 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.088 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.093 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.111 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.115 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.118 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.122 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.126 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.130 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.141 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.145 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.149 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:47.160 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:49.005 中国标准时间 Qt::TimeSpec(LocalTime)) "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.085 中国标准时间 Qt::TimeSpec(LocalTime)) "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.103 中国标准时间 Qt::TimeSpec(LocalTime)) "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.114 中国标准时间 Qt::TimeSpec(LocalTime)) "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.118 中国标准时间 Qt::TimeSpec(LocalTime)) "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.122 中国标准时间 Qt::TimeSpec(LocalTime)) "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.127 中国标准时间 Qt::TimeSpec(LocalTime)) "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.131 中国标准时间 Qt::TimeSpec(LocalTime)) "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.144 中国标准时间 Qt::TimeSpec(LocalTime)) "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.148 中国标准时间 Qt::TimeSpec(LocalTime)) "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.152 中国标准时间 Qt::TimeSpec(LocalTime)) "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.157 中国标准时间 Qt::TimeSpec(LocalTime)) "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.161 中国标准时间 Qt::TimeSpec(LocalTime)) "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.165 中国标准时间 Qt::TimeSpec(LocalTime)) "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.169 中国标准时间 Qt::TimeSpec(LocalTime)) "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(102) QDateTime(2019-11-20 11:47:51.191 中国标准时间 Qt::TimeSpec(LocalTime)) "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.087 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.107 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.115 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.121 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.126 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.131 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.135 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.147 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.152 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.158 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.162 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.166 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.170 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.174 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(134) QDateTime(2019-11-20 11:47:53.202 中国标准时间 Qt::TimeSpec(LocalTime)) "info Socket: 15   Connection refused"
