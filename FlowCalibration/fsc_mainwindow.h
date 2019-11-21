@@ -6,8 +6,8 @@
 #include <QtNetwork>
 #include <QSignalMapper>
 
-QByteArray HexStringToByteArray(QString HexString);
-QString ByteArrayToHexString(QByteArray &ba);
+QByteArray  HexStringToByteArray(QString HexString);
+QString     ByteArrayToHexString(QByteArray &ba);
 
 
 namespace Ui {
@@ -19,20 +19,20 @@ class FSC_MainWindow;
 #define SOCKET_NUMBER  17
 
 #define SOCKET_PLC_INDEX       0
-#define SOCKET_SCALE_INDEX     16
-#define SOCKET_STD_FLOWM_INDEX  15
-#define SOCKET_FLOWM1_INDEX   1
-#define SOCKET_FLOWM2_INDEX   2
-#define SOCKET_FLOWM3_INDEX   3
-#define SOCKET_FLOWM4_INDEX   4
-#define SOCKET_FLOWM5_INDEX   5
-#define SOCKET_FLOWM6_INDEX   6
-#define SOCKET_FLOWM7_INDEX   7
-#define SOCKET_FLOWM8_INDEX   8
-#define SOCKET_FLOWM9_INDEX   9
-#define SOCKET_FLOWM10_INDEX  10
-#define SOCKET_FLOWM11_INDEX  11
-#define SOCKET_FLOWM12_INDEX  12
+#define SOCKET_SCALE_INDEX     1
+#define SOCKET_STD_FLOWM_INDEX  2
+#define SOCKET_FLOWM1_INDEX   3
+#define SOCKET_FLOWM2_INDEX   4
+#define SOCKET_FLOWM3_INDEX   5
+#define SOCKET_FLOWM4_INDEX   6
+#define SOCKET_FLOWM5_INDEX   7
+#define SOCKET_FLOWM6_INDEX   8
+#define SOCKET_FLOWM7_INDEX   9
+#define SOCKET_FLOWM8_INDEX   10
+#define SOCKET_FLOWM9_INDEX   11
+#define SOCKET_FLOWM10_INDEX  12
+#define SOCKET_FLOWM11_INDEX  13
+#define SOCKET_FLOWM12_INDEX  14
 
 #define SOCKET_TCP_RETRY_CON_TIMEOUT    5
 
@@ -45,8 +45,8 @@ public:
     ~FSC_MainWindow();
 
     bool        sktConed[SOCKET_NUMBER];
-    QByteArray  sktSendBuf[SOCKET_NUMBER];
-    QByteArray  sktSendRev[SOCKET_NUMBER];
+    QByteArray  sktBufSend[SOCKET_NUMBER];
+    QByteArray  sktBufRev[SOCKET_NUMBER];
 
 private slots:
 
@@ -66,15 +66,23 @@ private slots:
 
     void mainLoop();
 
-
 private:
     Ui::FSC_MainWindow *ui;
 
     void ParaInit(void);
     void PlotInit(void);
+    void DataInit(void);
     void SocketInit(void);
 
     void PlotReplay(const QString &arg1);
+
+
+
+    void SendScaleShow(void);
+    void SendScaleZero(void);
+
+
+
 
     QSignalMapper * sktConMapper;
     QSignalMapper * sktDisconMapper;

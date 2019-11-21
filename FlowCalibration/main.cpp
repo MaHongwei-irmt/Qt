@@ -1,5 +1,4 @@
 #include "FSC_MainWindow.h"
-#include "FCMainWindow.h"
 #include <QApplication>
 
 void outputMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg);
