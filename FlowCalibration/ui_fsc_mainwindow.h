@@ -488,7 +488,7 @@ public:
         MyCustomPlot->setGeometry(QRect(330, 290, 1241, 531));
         tbnSensorType_5 = new QToolButton(MyCustomPlot);
         tbnSensorType_5->setObjectName(QStringLiteral("tbnSensorType_5"));
-        tbnSensorType_5->setGeometry(QRect(0, 471, 111, 21));
+        tbnSensorType_5->setGeometry(QRect(0, 510, 111, 21));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
         groupBox->setGeometry(QRect(320, 270, 1261, 561));

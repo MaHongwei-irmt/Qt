@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_FSC_MainWindow_t {
-    QByteArrayData data[13];
-    char stringdata0[240];
+    QByteArrayData data[14];
+    char stringdata0[234];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,20 +39,20 @@ QT_MOC_LITERAL(4, 71, 42), // "on_comboBox_PlotSenSel_curren..."
 QT_MOC_LITERAL(5, 114, 4), // "arg1"
 QT_MOC_LITERAL(6, 119, 46), // "on_comboBox_SensorTypeName_cu..."
 QT_MOC_LITERAL(7, 166, 5), // "index"
-QT_MOC_LITERAL(8, 172, 20), // "sktScale_connect_suc"
-QT_MOC_LITERAL(9, 193, 1), // "i"
-QT_MOC_LITERAL(10, 195, 20), // "sktScale_connect_dis"
-QT_MOC_LITERAL(11, 216, 14), // "sktScale_error"
-QT_MOC_LITERAL(12, 231, 8) // "mainLoop"
+QT_MOC_LITERAL(8, 172, 15), // "skt_connect_suc"
+QT_MOC_LITERAL(9, 188, 1), // "i"
+QT_MOC_LITERAL(10, 190, 15), // "skt_connect_dis"
+QT_MOC_LITERAL(11, 206, 9), // "skt_error"
+QT_MOC_LITERAL(12, 216, 8), // "skt_read"
+QT_MOC_LITERAL(13, 225, 8) // "mainLoop"
 
     },
     "FSC_MainWindow\0on_tbnSysDevCheck_clicked\0"
     "\0on_tbnManualCheckDev_clicked\0"
     "on_comboBox_PlotSenSel_currentIndexChanged\0"
     "arg1\0on_comboBox_SensorTypeName_currentIndexChanged\0"
-    "index\0sktScale_connect_suc\0i\0"
-    "sktScale_connect_dis\0sktScale_error\0"
-    "mainLoop"
+    "index\0skt_connect_suc\0i\0skt_connect_dis\0"
+    "skt_error\0skt_read\0mainLoop"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,7 +62,7 @@ static const uint qt_meta_data_FSC_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -70,20 +70,22 @@ static const uint qt_meta_data_FSC_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x08 /* Private */,
-       3,    0,   55,    2, 0x08 /* Private */,
-       4,    1,   56,    2, 0x08 /* Private */,
-       6,    1,   59,    2, 0x08 /* Private */,
-       8,    1,   62,    2, 0x08 /* Private */,
-      10,    1,   65,    2, 0x08 /* Private */,
-      11,    1,   68,    2, 0x08 /* Private */,
-      12,    0,   71,    2, 0x08 /* Private */,
+       1,    0,   59,    2, 0x08 /* Private */,
+       3,    0,   60,    2, 0x08 /* Private */,
+       4,    1,   61,    2, 0x08 /* Private */,
+       6,    1,   64,    2, 0x08 /* Private */,
+       8,    1,   67,    2, 0x08 /* Private */,
+      10,    1,   70,    2, 0x08 /* Private */,
+      11,    1,   73,    2, 0x08 /* Private */,
+      12,    1,   76,    2, 0x08 /* Private */,
+      13,    0,   79,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    5,
     QMetaType::Void, QMetaType::Int,    7,
+    QMetaType::Void, QMetaType::Int,    9,
     QMetaType::Void, QMetaType::Int,    9,
     QMetaType::Void, QMetaType::Int,    9,
     QMetaType::Void, QMetaType::Int,    9,
@@ -102,10 +104,11 @@ void FSC_MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 1: _t->on_tbnManualCheckDev_clicked(); break;
         case 2: _t->on_comboBox_PlotSenSel_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 3: _t->on_comboBox_SensorTypeName_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->sktScale_connect_suc((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 5: _t->sktScale_connect_dis((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 6: _t->sktScale_error((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 7: _t->mainLoop(); break;
+        case 4: _t->skt_connect_suc((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 5: _t->skt_connect_dis((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 6: _t->skt_error((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 7: _t->skt_read((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 8: _t->mainLoop(); break;
         default: ;
         }
     }
@@ -136,13 +139,13 @@ int FSC_MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

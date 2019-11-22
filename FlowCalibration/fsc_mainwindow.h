@@ -73,6 +73,7 @@ private:
     void SendScaleShow(void);
     void SendScaleZero(void);
 
+    void showFresh(void);
 
     bool        sktConed[SOCKET_NUMBER];
     QByteArray  sktBufSend[SOCKET_NUMBER];

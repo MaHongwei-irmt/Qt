@@ -308,15 +308,7 @@ void FSC_MainWindow::PlotInit(void)
 
 void FSC_MainWindow::DataInit(void)
 {
-    ui->lineEdit_scale_show->setText("NaN");
-    ui->lineEdit_scale_flow->setText("NaN");
-
-    ui->lineEdit_stdFM_sum->setText("NaN");
-    ui->lineEdit_stdFM_flow->setText("NaN");
-
-
-
-    showScaleSum = -100000.012;// static_cast<double>(nanf(""));
+    showScaleSum = static_cast<double>(nanf(""));
     showScaleFlow = static_cast<double>(nanf(""));
     showSTDFMSum = static_cast<double>(nanf(""));
     showSTDFMFlow = static_cast<double>(nanf(""));
@@ -326,36 +318,6 @@ void FSC_MainWindow::DataInit(void)
         showFMSum[i] = static_cast<double>(nanf(""));
         showFMFlow[i] = static_cast<double>(nanf(""));
     }
-
-    ui->lineEdit_FM_1->setText(QString::number(showScaleSum, 'f', 3));
-    ui->lineEdit_FM_2->setText("NaN");
-    ui->lineEdit_FM_3->setText("NaN");
-    ui->lineEdit_FM_4->setText("NaN");
-    ui->lineEdit_FM_5->setText("NaN");
-    ui->lineEdit_FM_6->setText("NaN");
-    ui->lineEdit_FM_7->setText("NaN");
-    ui->lineEdit_FM_8->setText("NaN");
-    ui->lineEdit_FM_9->setText("NaN");
-    ui->lineEdit_FM_10->setText("NaN");
-    ui->lineEdit_FM_11->setText("NaN");
-    ui->lineEdit_FM_12->setText("NaN");
-
-    ui->lineEdit_FM_1_flow->setText("NaN");
-    ui->lineEdit_FM_2_flow->setText("NaN");
-    ui->lineEdit_FM_3_flow->setText("NaN");
-    ui->lineEdit_FM_4_flow->setText("NaN");
-    ui->lineEdit_FM_5_flow->setText("NaN");
-    ui->lineEdit_FM_6_flow->setText("NaN");
-    ui->lineEdit_FM_7_flow->setText("NaN");
-    ui->lineEdit_FM_8_flow->setText("NaN");
-    ui->lineEdit_FM_9_flow->setText("NaN");
-    ui->lineEdit_FM_10_flow->setText("NaN");
-    ui->lineEdit_FM_11_flow->setText("NaN");
-    ui->lineEdit_FM_12_flow->setText("NaN");
-
-
-
-
 
 }
 
@@ -402,7 +364,7 @@ void FSC_MainWindow::SendScaleShow(void)
     sktBufSend[SOCKET_SCALE_INDEX][0]=0x1B;
     sktBufSend[SOCKET_SCALE_INDEX][1]=0x70;
 
-    if (fsc_global::sktTcp[SOCKET_SCALE_INDEX])
+    if (sktConed[SOCKET_SCALE_INDEX])
     {
         fsc_global::sktTcp[SOCKET_SCALE_INDEX]->write(sktBufSend[SOCKET_SCALE_INDEX]);
 
@@ -420,7 +382,7 @@ void FSC_MainWindow::SendScaleZero(void)
     sktBufSend[SOCKET_SCALE_INDEX][0]=0x1B;
     sktBufSend[SOCKET_SCALE_INDEX][1]=0x74;
 
-    if (fsc_global::sktTcp[SOCKET_SCALE_INDEX])
+    if (sktConed[SOCKET_SCALE_INDEX])
     {
         fsc_global::sktTcp[SOCKET_SCALE_INDEX]->write(sktBufSend[SOCKET_SCALE_INDEX]);
 
@@ -437,23 +399,6 @@ void FSC_MainWindow::mainLoop()
 
     j++;
 
-    if (j % 10 == 0)
-    {
-        sktBufSend[SOCKET_FLOWM1_INDEX].resize(2);
-        sktBufSend[SOCKET_FLOWM1_INDEX][0]=0x1B;
-        sktBufSend[SOCKET_FLOWM1_INDEX][1]=0x74;
-
-        if (sktConed[SOCKET_FLOWM1_INDEX])
-        {
-            fsc_global::sktTcp[SOCKET_FLOWM1_INDEX]->write(sktBufSend[SOCKET_FLOWM1_INDEX]);
-
-            FSCLOG << "Socket write: " + QString::number(SOCKET_FLOWM1_INDEX) + " " + QString::number(sktBufSend[SOCKET_FLOWM1_INDEX].size()) + \
-                      " " + ByteArrayToHexString(sktBufSend[SOCKET_FLOWM1_INDEX]);
-        }
-
-    }
-
-    SendScaleShow();
 
     for (int i = 0; i < SOCKET_NUMBER; i++)
     {
@@ -471,6 +416,31 @@ void FSC_MainWindow::mainLoop()
 
     }
 
+
+    if (j % 10 == 0)
+    {
+        sktBufSend[SOCKET_FLOWM1_INDEX].resize(2);
+        sktBufSend[SOCKET_FLOWM1_INDEX][0]=0x1B;
+        sktBufSend[SOCKET_FLOWM1_INDEX][1]=0x74;
+
+        if (sktConed[SOCKET_FLOWM1_INDEX])
+        {
+            fsc_global::sktTcp[SOCKET_FLOWM1_INDEX]->write(sktBufSend[SOCKET_FLOWM1_INDEX]);
+
+            FSCLOG << "Socket write: " + QString::number(SOCKET_FLOWM1_INDEX) + " " + QString::number(sktBufSend[SOCKET_FLOWM1_INDEX].size()) + \
+                      " " + ByteArrayToHexString(sktBufSend[SOCKET_FLOWM1_INDEX]);
+        }
+
+    }//test
+
+    SendScaleShow();//test
+
+    showFresh();
+
+}
+
+void FSC_MainWindow::showFresh()
+{
     ui->lineEdit_scale_show->setEnabled(sktConed[SOCKET_SCALE_INDEX]);
     ui->lineEdit_scale_flow->setEnabled(sktConed[SOCKET_SCALE_INDEX]);
 
@@ -503,58 +473,41 @@ void FSC_MainWindow::mainLoop()
     ui->lineEdit_FM_11_flow->setEnabled(sktConed[SOCKET_FLOWM11_INDEX]);
     ui->lineEdit_FM_12_flow->setEnabled(sktConed[SOCKET_FLOWM12_INDEX]);
 
-//    ui->lineEdit_scale_show->setText(showScaleSum);
-//    ui->lineEdit_scale_flow->setText("NaN");
+    ui->lineEdit_scale_show->setText(QString::number(showScaleSum, 'f', 3));
+    ui->lineEdit_scale_flow->setText(QString::number(showScaleFlow, 'f', 3));
+    ui->lineEdit_stdFM_sum->setText(QString::number(showSTDFMSum, 'f', 3));
+    ui->lineEdit_stdFM_flow->setText(QString::number(showSTDFMFlow, 'f', 3));
 
-//    ui->lineEdit_stdFM_sum->setText("NaN");
-//    ui->lineEdit_stdFM_flow->setText("NaN");
+    ui->lineEdit_FM_1->setText(QString::number(showFMSum[0], 'f', 3));
+    ui->lineEdit_FM_2->setText(QString::number(showFMSum[1], 'f', 3));
+    ui->lineEdit_FM_3->setText(QString::number(showFMSum[2], 'f', 3));
+    ui->lineEdit_FM_4->setText(QString::number(showFMSum[3], 'f', 3));
+    ui->lineEdit_FM_5->setText(QString::number(showFMSum[4], 'f', 3));
+    ui->lineEdit_FM_6->setText(QString::number(showFMSum[5], 'f', 3));
+    ui->lineEdit_FM_7->setText(QString::number(showFMSum[6], 'f', 3));
+    ui->lineEdit_FM_8->setText(QString::number(showFMSum[7], 'f', 3));
+    ui->lineEdit_FM_9->setText(QString::number(showFMSum[8], 'f', 3));
+    ui->lineEdit_FM_10->setText(QString::number(showFMSum[9], 'f', 3));
+    ui->lineEdit_FM_11->setText(QString::number(showFMSum[10], 'f', 3));
+    ui->lineEdit_FM_12->setText(QString::number(showFMSum[11], 'f', 3));
 
-
-//    showScaleSum = static_cast<double>(nanf(""));
-//    showScaleFlow = static_cast<double>(nanf(""));
-//    showSTDFMSum = static_cast<double>(nanf(""));
-//    showSTDFMFlow = static_cast<double>(nanf(""));
-
-//    for (int i = 0; i < SCALE_NUMBER; i++)
-//    {
-//        showFMSum[i] = static_cast<double>(nanf(""));
-//        showFMFlow[i] = static_cast<double>(nanf(""));
-//    }
-
-//    ui->lineEdit_FM_1->setText(QString::number(showScaleSum, 'f', 2));
-//    ui->lineEdit_FM_2->setText("NaN");
-//    ui->lineEdit_FM_3->setText("NaN");
-//    ui->lineEdit_FM_4->setText("NaN");
-//    ui->lineEdit_FM_5->setText("NaN");
-//    ui->lineEdit_FM_6->setText("NaN");
-//    ui->lineEdit_FM_7->setText("NaN");
-//    ui->lineEdit_FM_8->setText("NaN");
-//    ui->lineEdit_FM_9->setText("NaN");
-//    ui->lineEdit_FM_10->setText("NaN");
-//    ui->lineEdit_FM_11->setText("NaN");
-//    ui->lineEdit_FM_12->setText("NaN");
-
-//    ui->lineEdit_FM_1_flow->setText("NaN");
-//    ui->lineEdit_FM_2_flow->setText("NaN");
-//    ui->lineEdit_FM_3_flow->setText("NaN");
-//    ui->lineEdit_FM_4_flow->setText("NaN");
-//    ui->lineEdit_FM_5_flow->setText("NaN");
-//    ui->lineEdit_FM_6_flow->setText("NaN");
-//    ui->lineEdit_FM_7_flow->setText("NaN");
-//    ui->lineEdit_FM_8_flow->setText("NaN");
-//    ui->lineEdit_FM_9_flow->setText("NaN");
-//    ui->lineEdit_FM_10_flow->setText("NaN");
-//    ui->lineEdit_FM_11_flow->setText("NaN");
-//    ui->lineEdit_FM_12_flow->setText("NaN");
-
-
+    ui->lineEdit_FM_1_flow->setText(QString::number(showFMFlow[0], 'f', 3));
+    ui->lineEdit_FM_2_flow->setText(QString::number(showFMFlow[1], 'f', 3));
+    ui->lineEdit_FM_3_flow->setText(QString::number(showFMFlow[2], 'f', 3));
+    ui->lineEdit_FM_4_flow->setText(QString::number(showFMFlow[3], 'f', 3));
+    ui->lineEdit_FM_5_flow->setText(QString::number(showFMFlow[4], 'f', 3));
+    ui->lineEdit_FM_6_flow->setText(QString::number(showFMFlow[5], 'f', 3));
+    ui->lineEdit_FM_7_flow->setText(QString::number(showFMFlow[6], 'f', 3));
+    ui->lineEdit_FM_8_flow->setText(QString::number(showFMFlow[7], 'f', 3));
+    ui->lineEdit_FM_9_flow->setText(QString::number(showFMFlow[8], 'f', 3));
+    ui->lineEdit_FM_10_flow->setText(QString::number(showFMFlow[9], 'f', 3));
+    ui->lineEdit_FM_11_flow->setText(QString::number(showFMFlow[10], 'f', 3));
+    ui->lineEdit_FM_12_flow->setText(QString::number(showFMFlow[11], 'f', 3));
 
 }
 
 void FSC_MainWindow::skt_read(int i)
 {
-    QByteArray last = sktBufRev[i];
-
     sktBufRev[i] = fsc_global::sktTcp[i]->readAll();
 
     FSCLOG << "Socket read: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + ByteArrayToHexString(sktBufRev[i]);
@@ -562,28 +515,17 @@ void FSC_MainWindow::skt_read(int i)
     switch (i)
     {
     case SOCKET_SCALE_INDEX:
-        ui->lineEdit_scale_show->setText("");
-        ui->lineEdit_scale_flow->setText("");
 
         FSCLOG << "Socket read: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + sktBufRev[i];
 
-        ui->lineEdit_scale_show->setText(sktBufRev[i]);
-
-
-        {
-            float f1 = sktBufRev[i].toFloat();
-            float f2 = last.toFloat();
-
-            ui->lineEdit_scale_flow->setText(QByteArray::number( static_cast<double>(f1 - f2) , 'f', 2)  );
-
-        }
-
+        showScaleFlow = sktBufRev[i].toDouble() - showScaleSum;
+        showScaleSum = sktBufRev[i].toDouble();
         break;
 
     case SOCKET_STD_FLOWM_INDEX:
 
-        ui->lineEdit_stdFM_sum->setText("");
-        ui->lineEdit_stdFM_flow->setText("");
+        showSTDFMSum = sktBufRev[i].toDouble() + 100;
+        showSTDFMFlow = sktBufRev[i].toDouble();
 
         if (fsc_global::sktTcp[SOCKET_STD_FLOWM_INDEX])
         {
@@ -602,63 +544,64 @@ void FSC_MainWindow::skt_read(int i)
         break;
 
     case SOCKET_FLOWM1_INDEX:
-        ui->lineEdit_FM_1->setText("");
-        ui->lineEdit_FM_1_flow->setText("");
+        showFMSum[0] = 0;
+        showFMFlow[0] = 0;
         break;
 
     case SOCKET_FLOWM2_INDEX:
-        ui->lineEdit_FM_2->setText("");
-        ui->lineEdit_FM_2_flow->setText("");
+        showFMSum[1] = 0;
+        showFMFlow[1] = 0;
         break;
 
     case SOCKET_FLOWM3_INDEX:
-        ui->lineEdit_FM_3->setText("");
-        ui->lineEdit_FM_3_flow->setText("");
+        showFMSum[2] = 0;
+        showFMFlow[2] = 0;
         break;
 
     case SOCKET_FLOWM4_INDEX:
-        ui->lineEdit_FM_4->setText("");
-        ui->lineEdit_FM_4_flow->setText("");
+        showFMSum[3] = 0;
+        showFMFlow[3] = 0;
         break;
 
     case SOCKET_FLOWM5_INDEX:
-        ui->lineEdit_FM_5->setText("");
-        ui->lineEdit_FM_5_flow->setText("");
+        showFMSum[4] = 0;
+        showFMFlow[4] = 0;
         break;
 
 
     case SOCKET_FLOWM6_INDEX:
-        ui->lineEdit_FM_6->setText("");
-        ui->lineEdit_FM_6_flow->setText("");
+        showFMSum[5] = 0;
+        showFMFlow[5] = 0;
         break;
 
     case SOCKET_FLOWM7_INDEX:
-        ui->lineEdit_FM_7->setText("");
-        ui->lineEdit_FM_7_flow->setText("");
+        showFMSum[6] = 0;
+        showFMFlow[6] = 0;
         break;
 
     case SOCKET_FLOWM8_INDEX:
-        ui->lineEdit_FM_8->setText("");
-        ui->lineEdit_FM_8_flow->setText("");
+        showFMSum[7] = 0;
+        showFMFlow[7] = 0;
         break;
 
     case SOCKET_FLOWM9_INDEX:
-        ui->lineEdit_FM_9_flow->setText("");
+        showFMSum[8] = 0;
+        showFMFlow[8] = 0;
         break;
 
     case SOCKET_FLOWM10_INDEX:
-        ui->lineEdit_FM_10->setText("");
-        ui->lineEdit_FM_10_flow->setText("");
+        showFMSum[9] = 0;
+        showFMFlow[9] = 0;
         break;
 
     case SOCKET_FLOWM11_INDEX:
-        ui->lineEdit_FM_11->setText("");
-        ui->lineEdit_FM_11_flow->setText("");
+        showFMSum[10] = 0;
+        showFMFlow[10] = 0;
         break;
 
     case SOCKET_FLOWM12_INDEX:
-        ui->lineEdit_FM_12->setText("");
-        ui->lineEdit_FM_12_flow->setText("");
+        showFMSum[11] = 0;
+        showFMFlow[11] = 0;
         break;
 
     }
@@ -685,100 +628,97 @@ void FSC_MainWindow::skt_connect_dis(int i)
     {
     case SOCKET_SCALE_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showScaleSum = static_cast<double>(nanf(""));
+        showScaleFlow = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_STD_FLOWM_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showSTDFMSum = static_cast<double>(nanf(""));
+        showSTDFMFlow = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_FLOWM1_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[0] = static_cast<double>(nanf(""));
+        showFMFlow[0] = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_FLOWM2_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[1] = static_cast<double>(nanf(""));
+        showFMFlow[1] = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_FLOWM3_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[2] = static_cast<double>(nanf(""));
+        showFMFlow[2] = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_FLOWM4_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[3] = static_cast<double>(nanf(""));
+        showFMFlow[3] = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_FLOWM5_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[4] = static_cast<double>(nanf(""));
+        showFMFlow[4] = static_cast<double>(nanf(""));
 
         break;
 
 
     case SOCKET_FLOWM6_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[5] = static_cast<double>(nanf(""));
+        showFMFlow[5] = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_FLOWM7_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[6] = static_cast<double>(nanf(""));
+        showFMFlow[6] = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_FLOWM8_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
-
+        showFMSum[7] = static_cast<double>(nanf(""));
+        showFMFlow[7] = static_cast<double>(nanf(""));
         break;
 
     case SOCKET_FLOWM9_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[8] = static_cast<double>(nanf(""));
+        showFMFlow[8] = static_cast<double>(nanf(""));
 
         break;
 
     case SOCKET_FLOWM10_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
-
+        showFMSum[9] = static_cast<double>(nanf(""));
+        showFMFlow[9] = static_cast<double>(nanf(""));
         break;
 
     case SOCKET_FLOWM11_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
-
+        showFMSum[10] = static_cast<double>(nanf(""));
+        showFMFlow[10] = static_cast<double>(nanf(""));
         break;
 
     case SOCKET_FLOWM12_INDEX:
 
-        ui->lineEdit_scale_show->setText("NaN");
-        ui->lineEdit_scale_flow->setText("NaN");
+        showFMSum[11] = static_cast<double>(nanf(""));
+        showFMFlow[11] = static_cast<double>(nanf(""));
 
         break;
 
