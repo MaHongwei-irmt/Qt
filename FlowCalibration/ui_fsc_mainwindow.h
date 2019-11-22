@@ -668,6 +668,7 @@ public:
         lineEdit_FM_1_flow->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lineEdit_FM_1_flow->setReadOnly(true);
         FSC_MainWindow->setCentralWidget(centralwidget);
+        groupBox_2->raise();
         line_2->raise();
         line_7->raise();
         line_4->raise();
@@ -752,7 +753,6 @@ public:
         label_25->raise();
         line->raise();
         label_12->raise();
-        groupBox_2->raise();
         label_20->raise();
         lineEdit_FM_2_flow->raise();
         lineEdit_FM_10_flow->raise();

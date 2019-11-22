@@ -9,7 +9,6 @@
 QByteArray  HexStringToByteArray(QString HexString);
 QString     ByteArrayToHexString(QByteArray &ba);
 
-
 namespace Ui {
 class FSC_MainWindow;
 }
@@ -19,21 +18,21 @@ class FSC_MainWindow;
 #define SCALE_NUMBER    12
 #define SOCKET_NUMBER   17
 
-#define SOCKET_PLC_INDEX       0
-#define SOCKET_SCALE_INDEX     1
+#define SOCKET_PLC_INDEX        0
+#define SOCKET_SCALE_INDEX      1
 #define SOCKET_STD_FLOWM_INDEX  2
-#define SOCKET_FLOWM1_INDEX   3
-#define SOCKET_FLOWM2_INDEX   4
-#define SOCKET_FLOWM3_INDEX   5
-#define SOCKET_FLOWM4_INDEX   6
-#define SOCKET_FLOWM5_INDEX   7
-#define SOCKET_FLOWM6_INDEX   8
-#define SOCKET_FLOWM7_INDEX   9
-#define SOCKET_FLOWM8_INDEX   10
-#define SOCKET_FLOWM9_INDEX   11
-#define SOCKET_FLOWM10_INDEX  12
-#define SOCKET_FLOWM11_INDEX  13
-#define SOCKET_FLOWM12_INDEX  14
+#define SOCKET_FLOWM1_INDEX     3
+#define SOCKET_FLOWM2_INDEX     4
+#define SOCKET_FLOWM3_INDEX     5
+#define SOCKET_FLOWM4_INDEX     6
+#define SOCKET_FLOWM5_INDEX     7
+#define SOCKET_FLOWM6_INDEX     8
+#define SOCKET_FLOWM7_INDEX     9
+#define SOCKET_FLOWM8_INDEX     10
+#define SOCKET_FLOWM9_INDEX     11
+#define SOCKET_FLOWM10_INDEX    12
+#define SOCKET_FLOWM11_INDEX    13
+#define SOCKET_FLOWM12_INDEX    14
 
 #define SOCKET_TCP_RETRY_CON_TIMEOUT    5
 
@@ -45,13 +44,7 @@ public:
     explicit FSC_MainWindow(QWidget *parent = nullptr);
     ~FSC_MainWindow();
 
-    bool        sktConed[SOCKET_NUMBER];
-    QByteArray  sktBufSend[SOCKET_NUMBER];
-    QByteArray  sktBufRev[SOCKET_NUMBER];
-
 private slots:
-
-
     void on_tbnSysDevCheck_clicked();
 
     void on_tbnManualCheckDev_clicked();
@@ -77,76 +70,43 @@ private:
 
     void PlotReplay(const QString &arg1);
 
-
-
     void SendScaleShow(void);
     void SendScaleZero(void);
 
 
-
+    bool        sktConed[SOCKET_NUMBER];
+    QByteArray  sktBufSend[SOCKET_NUMBER];
+    QByteArray  sktBufRev[SOCKET_NUMBER];
 
     QSignalMapper * sktConMapper;
     QSignalMapper * sktDisconMapper;
     QSignalMapper * sktErrMapper;
     QSignalMapper * sktReadMapper;
 
-    QTimer           *mainLoopTimer         = nullptr;
+    QTimer  *mainLoopTimer = nullptr;
 
     uint sktConCommandTime[SOCKET_NUMBER];
 
-
+    double  showScaleSum;
+    double  showScaleFlow;
+    double  showSTDFMSum;
+    double  showSTDFMFlow;
+    double  showFMSum[SCALE_NUMBER];
+    double  showFMFlow[SCALE_NUMBER];
 };
 
 class fsc_para_ini
 {
 
- public:
+public:
 
     QString type_name;
 
     double span_ml_per_min;
 
-    bool span_100_cal;
-    bool span_90_cal;
-    bool span_80_cal;
-    bool span_70_cal;
-    bool span_60_cal;
-    bool span_50_cal;
-    bool span_40_cal;
-    bool span_30_cal;
-    bool span_20_cal;
-    bool span_10_cal;
-
-
-    bool span_100_check;
-    bool span_90_check;
-    bool span_80_check;
-    bool span_70_check;
-    bool span_60_check;
-    bool span_50_check;
-    bool span_40_check;
-    bool span_30_check;
-    bool span_20_check;
-    bool span_10_check;
-
-
-
-    bool span_100_correct;
-    bool span_90_correct;
-    bool span_80_correct;
-    bool span_70_correct;
-    bool span_60_correct;
-    bool span_50_correct;
-    bool span_40_correct;
-    bool span_30_correct;
-    bool span_20_correct;
-    bool span_10_correct;
-
-
-
-
-
-
+    bool    span10_cal[10];
+    bool    span10_check[10];
+    bool    span10_correct[10];
 
     QVector <uint> new_cal_pos;
     QVector <uint> new_check_pos;
@@ -166,7 +126,6 @@ public:
     static QString ip_RS_Server;
     static quint16 port_number[SOCKET_NUMBER];
     static QString ip[SOCKET_NUMBER];
-
 };
 
 

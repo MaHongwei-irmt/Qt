@@ -81,38 +81,38 @@ void FSC_MainWindow::ParaInit(void)
 
         tmp.span_ml_per_min = configIni->value( "sensor_type_" + QString::number(i) +"/span_ml_per_min" ).toDouble();
 
-        tmp.span_100_cal = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_90_cal = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_80_cal = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_70_cal = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_60_cal = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_50_cal = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_40_cal = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_30_cal = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_20_cal = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_position_to_be_calibrate" ).toBool();
-        tmp.span_10_cal = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[0] = configIni->value( "sensor_type_" + QString::number(i) +"/10_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[1] = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[2] = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[3] = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[4] = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[5] = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[6] = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[7] = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[8] = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_position_to_be_calibrate" ).toBool();
+        tmp.span10_cal[9] = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_position_to_be_calibrate" ).toBool();
 
-        tmp.span_100_check = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_position_to_be_verify" ).toBool();
-        tmp.span_90_check = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_position_to_be_verify" ).toBool();
-        tmp.span_80_check = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_position_to_be_verify" ).toBool();
-        tmp.span_70_check = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_position_to_be_verify" ).toBool();
-        tmp.span_60_check = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_position_to_be_verify" ).toBool();
-        tmp.span_50_check = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_position_to_be_verify" ).toBool();
-        tmp.span_40_check = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_position_to_be_verify" ).toBool();
-        tmp.span_30_check = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_position_to_be_verify" ).toBool();
-        tmp.span_20_check = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_position_to_be_verify" ).toBool();
-        tmp.span_10_check = configIni->value( "sensor_type_" + QString::number(i) +"/10_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[0] = configIni->value( "sensor_type_" + QString::number(i) +"/10_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[1] = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[2] = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[3] = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[4] = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[5] = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[6] = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[7] = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[8] = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_position_to_be_verify" ).toBool();
+        tmp.span10_check[9] = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_position_to_be_verify" ).toBool();
 
-        tmp.span_100_correct = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_position_to_be_correct" ).toBool();
-        tmp.span_90_correct = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_position_to_be_correct" ).toBool();
-        tmp.span_80_correct = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_position_to_be_correct" ).toBool();
-        tmp.span_70_correct = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_position_to_be_correct" ).toBool();
-        tmp.span_60_correct = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_position_to_be_correct" ).toBool();
-        tmp.span_50_correct = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_position_to_be_correct" ).toBool();
-        tmp.span_40_correct = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_position_to_be_correct" ).toBool();
-        tmp.span_30_correct = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_position_to_be_correct" ).toBool();
-        tmp.span_20_correct = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_position_to_be_correct" ).toBool();
-        tmp.span_10_correct = configIni->value( "sensor_type_" + QString::number(i) +"/10_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[0] = configIni->value( "sensor_type_" + QString::number(i) +"/10_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[1] = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[3] = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[3] = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[4] = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[5] = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[6] = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[7] = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[8] = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_position_to_be_correct" ).toBool();
+        tmp.span10_correct[9] = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_position_to_be_correct" ).toBool();
 
         fsc_global::para_ini.append(tmp);
 
@@ -340,6 +340,16 @@ void FSC_MainWindow::DataInit(void)
     ui->lineEdit_FM_10_flow->setText("NaN");
     ui->lineEdit_FM_11_flow->setText("NaN");
     ui->lineEdit_FM_12_flow->setText("NaN");
+
+/*
+    double  showScaleSum;
+    double  showScaleFlow;
+    double  showSTDFMSum;
+    double  showSTDFMFlow;
+    double  showFMSum[SCALE_NUMBER];
+    double  showFMFlow[SCALE_NUMBER];
+*/
+
 }
 
 void FSC_MainWindow::SocketInit(void)
@@ -961,40 +971,38 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
 
     ui->leFlowSpeed_SensorSpan->setText(QString::number(fsc_global::para_ini.at(index).span_ml_per_min));
 
-    ui->checkBox_100SpanCal->setChecked(fsc_global::para_ini.at(index).span_100_cal);
-    ui->checkBox_90SpanCal->setChecked(fsc_global::para_ini.at(index).span_90_cal);
-    ui->checkBox_80SpanCal->setChecked(fsc_global::para_ini.at(index).span_80_cal);
-    ui->checkBox_70SpanCal->setChecked(fsc_global::para_ini.at(index).span_70_cal);
-    ui->checkBox_60SpanCal->setChecked(fsc_global::para_ini.at(index).span_60_cal);
-    ui->checkBox_50SpanCal->setChecked(fsc_global::para_ini.at(index).span_50_cal);
-    ui->checkBox_40SpanCal->setChecked(fsc_global::para_ini.at(index).span_40_cal);
-    ui->checkBox_30SpanCal->setChecked(fsc_global::para_ini.at(index).span_30_cal);
-    ui->checkBox_20SpanCal->setChecked(fsc_global::para_ini.at(index).span_20_cal);
-    ui->checkBox_10SpanCal->setChecked(fsc_global::para_ini.at(index).span_10_cal);
+    ui->checkBox_100SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[9]);
+    ui->checkBox_90SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[8]);
+    ui->checkBox_80SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[7]);
+    ui->checkBox_70SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[6]);
+    ui->checkBox_60SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[5]);
+    ui->checkBox_50SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[4]);
+    ui->checkBox_40SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[3]);
+    ui->checkBox_30SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[2]);
+    ui->checkBox_20SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[1]);
+    ui->checkBox_10SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[0]);
 
-    ui->checkBox_100SpanCheck->setChecked(fsc_global::para_ini.at(index).span_100_check);
-    ui->checkBox_90SpanCheck->setChecked(fsc_global::para_ini.at(index).span_90_check);
-    ui->checkBox_80SpanCheck->setChecked(fsc_global::para_ini.at(index).span_80_check);
-    ui->checkBox_70SpanCheck->setChecked(fsc_global::para_ini.at(index).span_70_check);
-    ui->checkBox_60SpanCheck->setChecked(fsc_global::para_ini.at(index).span_60_check);
-    ui->checkBox_50SpanCheck->setChecked(fsc_global::para_ini.at(index).span_50_check);
-    ui->checkBox_40SpanCheck->setChecked(fsc_global::para_ini.at(index).span_40_check);
-    ui->checkBox_30SpanCheck->setChecked(fsc_global::para_ini.at(index).span_30_check);
-    ui->checkBox_20SpanCheck->setChecked(fsc_global::para_ini.at(index).span_20_check);
-    ui->checkBox_10SpanCheck->setChecked(fsc_global::para_ini.at(index).span_10_check);
+    ui->checkBox_100SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[9]);
+    ui->checkBox_90SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[8]);
+    ui->checkBox_80SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[7]);
+    ui->checkBox_70SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[6]);
+    ui->checkBox_60SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[5]);
+    ui->checkBox_50SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[4]);
+    ui->checkBox_40SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[3]);
+    ui->checkBox_30SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[2]);
+    ui->checkBox_20SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[1]);
+    ui->checkBox_10SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[0]);
 
-    ui->checkBox_100SpanModify->setChecked(fsc_global::para_ini.at(index).span_100_correct);
-    ui->checkBox_90SpanModify->setChecked(fsc_global::para_ini.at(index).span_90_correct);
-    ui->checkBox_80SpanModify->setChecked(fsc_global::para_ini.at(index).span_80_correct);
-    ui->checkBox_70SpanModify->setChecked(fsc_global::para_ini.at(index).span_70_correct);
-    ui->checkBox_60SpanModify->setChecked(fsc_global::para_ini.at(index).span_60_correct);
-    ui->checkBox_50SpanModify->setChecked(fsc_global::para_ini.at(index).span_50_correct);
-    ui->checkBox_40SpanModify->setChecked(fsc_global::para_ini.at(index).span_40_correct);
-    ui->checkBox_30SpanModify->setChecked(fsc_global::para_ini.at(index).span_30_correct);
-    ui->checkBox_20SpanModify->setChecked(fsc_global::para_ini.at(index).span_20_correct);
-    ui->checkBox_10SpanModify->setChecked(fsc_global::para_ini.at(index).span_10_correct);
+    ui->checkBox_100SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[9]);
+    ui->checkBox_90SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[8]);
+    ui->checkBox_80SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[7]);
+    ui->checkBox_70SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[6]);
+    ui->checkBox_60SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[5]);
+    ui->checkBox_50SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[4]);
+    ui->checkBox_40SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[3]);
+    ui->checkBox_30SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[2]);
+    ui->checkBox_20SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[1]);
+    ui->checkBox_10SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[0]);
 
 }
-
-
 
