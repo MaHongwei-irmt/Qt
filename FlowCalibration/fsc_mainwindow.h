@@ -16,7 +16,8 @@ class FSC_MainWindow;
 
 #define FSCLOG  qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:zzz")
 
-#define SOCKET_NUMBER  17
+#define SCALE_NUMBER    12
+#define SOCKET_NUMBER   17
 
 #define SOCKET_PLC_INDEX       0
 #define SOCKET_SCALE_INDEX     1

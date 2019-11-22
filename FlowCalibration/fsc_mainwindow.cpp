@@ -6,6 +6,7 @@
 #include <QSettings>
 #include <QDebug>
 
+
 QVector <fsc_para_ini>  fsc_global::para_ini;
 QTcpSocket*             fsc_global::sktTcp[SOCKET_NUMBER];
 QString                 fsc_global::ip_PLC;
@@ -22,25 +23,6 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui
     PlotInit();
     DataInit();
     SocketInit();
-
-    ui->lineEdit_scale_show->setText("NaN");
-    ui->lineEdit_scale_flow->setText("NaN");
-
-    ui->lineEdit_stdFM_sum->setText("NaN");
-    ui->lineEdit_stdFM_flow->setText("NaN");
-
-    ui->lineEdit_FM_1->setText("NaN");
-    ui->lineEdit_FM_2->setText("NaN");
-    ui->lineEdit_FM_3->setText("NaN");
-    ui->lineEdit_FM_4->setText("NaN");
-    ui->lineEdit_FM_5->setText("NaN");
-    ui->lineEdit_FM_6->setText("NaN");
-    ui->lineEdit_FM_7->setText("NaN");
-    ui->lineEdit_FM_8->setText("NaN");
-    ui->lineEdit_FM_9->setText("NaN");
-    ui->lineEdit_FM_10->setText("NaN");
-    ui->lineEdit_FM_11->setText("NaN");
-    ui->lineEdit_FM_12->setText("NaN");
 
     connect(mainLoopTimer, SIGNAL(timeout()), this, SLOT(mainLoop()));
     mainLoopTimer->start(100);
@@ -326,12 +308,12 @@ void FSC_MainWindow::PlotInit(void)
 
 void FSC_MainWindow::DataInit(void)
 {
-
     ui->lineEdit_scale_show->setText("NaN");
     ui->lineEdit_scale_flow->setText("NaN");
 
     ui->lineEdit_stdFM_sum->setText("NaN");
     ui->lineEdit_stdFM_flow->setText("NaN");
+
 
     ui->lineEdit_FM_1->setText("NaN");
     ui->lineEdit_FM_2->setText("NaN");
@@ -346,6 +328,18 @@ void FSC_MainWindow::DataInit(void)
     ui->lineEdit_FM_11->setText("NaN");
     ui->lineEdit_FM_12->setText("NaN");
 
+    ui->lineEdit_FM_1_flow->setText("NaN");
+    ui->lineEdit_FM_2_flow->setText("NaN");
+    ui->lineEdit_FM_3_flow->setText("NaN");
+    ui->lineEdit_FM_4_flow->setText("NaN");
+    ui->lineEdit_FM_5_flow->setText("NaN");
+    ui->lineEdit_FM_6_flow->setText("NaN");
+    ui->lineEdit_FM_7_flow->setText("NaN");
+    ui->lineEdit_FM_8_flow->setText("NaN");
+    ui->lineEdit_FM_9_flow->setText("NaN");
+    ui->lineEdit_FM_10_flow->setText("NaN");
+    ui->lineEdit_FM_11_flow->setText("NaN");
+    ui->lineEdit_FM_12_flow->setText("NaN");
 }
 
 void FSC_MainWindow::SocketInit(void)
@@ -479,6 +473,19 @@ void FSC_MainWindow::mainLoop()
     ui->lineEdit_FM_11->setEnabled(sktConed[SOCKET_FLOWM11_INDEX]);
     ui->lineEdit_FM_12->setEnabled(sktConed[SOCKET_FLOWM12_INDEX]);
 
+    ui->lineEdit_FM_1_flow->setEnabled(sktConed[SOCKET_FLOWM1_INDEX]);
+    ui->lineEdit_FM_2_flow->setEnabled(sktConed[SOCKET_FLOWM2_INDEX]);
+    ui->lineEdit_FM_3_flow->setEnabled(sktConed[SOCKET_FLOWM3_INDEX]);
+    ui->lineEdit_FM_4_flow->setEnabled(sktConed[SOCKET_FLOWM4_INDEX]);
+    ui->lineEdit_FM_5_flow->setEnabled(sktConed[SOCKET_FLOWM5_INDEX]);
+    ui->lineEdit_FM_6_flow->setEnabled(sktConed[SOCKET_FLOWM6_INDEX]);
+    ui->lineEdit_FM_7_flow->setEnabled(sktConed[SOCKET_FLOWM7_INDEX]);
+    ui->lineEdit_FM_8_flow->setEnabled(sktConed[SOCKET_FLOWM8_INDEX]);
+    ui->lineEdit_FM_9_flow->setEnabled(sktConed[SOCKET_FLOWM9_INDEX]);
+    ui->lineEdit_FM_10_flow->setEnabled(sktConed[SOCKET_FLOWM10_INDEX]);
+    ui->lineEdit_FM_11_flow->setEnabled(sktConed[SOCKET_FLOWM11_INDEX]);
+    ui->lineEdit_FM_12_flow->setEnabled(sktConed[SOCKET_FLOWM12_INDEX]);
+
 }
 
 void FSC_MainWindow::skt_read(int i)
@@ -500,10 +507,13 @@ void FSC_MainWindow::skt_read(int i)
         ui->lineEdit_scale_show->setText(sktBufRev[i]);
 
 
+        {
+            float f1 = sktBufRev[i].toFloat();
+            float f2 = last.toFloat();
 
-        ui->lineEdit_scale_flow->setText( QByteArray::number( (static_cast<float_t>(sktBufRev[i].toFloat()) \
-                                                               - static_cast<float_t>(last.toFloat())) , 'f', 2) );
+            ui->lineEdit_scale_flow->setText(QByteArray::number( static_cast<double>(f1 - f2) , 'f', 2)  );
 
+        }
 
         break;
 
@@ -530,53 +540,63 @@ void FSC_MainWindow::skt_read(int i)
 
     case SOCKET_FLOWM1_INDEX:
         ui->lineEdit_FM_1->setText("");
+        ui->lineEdit_FM_1_flow->setText("");
         break;
 
     case SOCKET_FLOWM2_INDEX:
         ui->lineEdit_FM_2->setText("");
+        ui->lineEdit_FM_2_flow->setText("");
         break;
 
     case SOCKET_FLOWM3_INDEX:
         ui->lineEdit_FM_3->setText("");
+        ui->lineEdit_FM_3_flow->setText("");
         break;
 
     case SOCKET_FLOWM4_INDEX:
         ui->lineEdit_FM_4->setText("");
+        ui->lineEdit_FM_4_flow->setText("");
         break;
 
     case SOCKET_FLOWM5_INDEX:
         ui->lineEdit_FM_5->setText("");
+        ui->lineEdit_FM_5_flow->setText("");
         break;
 
 
     case SOCKET_FLOWM6_INDEX:
         ui->lineEdit_FM_6->setText("");
+        ui->lineEdit_FM_6_flow->setText("");
         break;
 
     case SOCKET_FLOWM7_INDEX:
         ui->lineEdit_FM_7->setText("");
+        ui->lineEdit_FM_7_flow->setText("");
         break;
 
     case SOCKET_FLOWM8_INDEX:
         ui->lineEdit_FM_8->setText("");
+        ui->lineEdit_FM_8_flow->setText("");
         break;
 
     case SOCKET_FLOWM9_INDEX:
-        ui->lineEdit_FM_9->setText("");
+        ui->lineEdit_FM_9_flow->setText("");
         break;
 
     case SOCKET_FLOWM10_INDEX:
         ui->lineEdit_FM_10->setText("");
+        ui->lineEdit_FM_10_flow->setText("");
         break;
 
     case SOCKET_FLOWM11_INDEX:
         ui->lineEdit_FM_11->setText("");
+        ui->lineEdit_FM_11_flow->setText("");
         break;
 
     case SOCKET_FLOWM12_INDEX:
         ui->lineEdit_FM_12->setText("");
-       break;
-
+        ui->lineEdit_FM_12_flow->setText("");
+        break;
 
     }
 
