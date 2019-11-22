@@ -76,3 +76,26 @@ QString ByteArrayToHexString(QByteArray &ba)
     }
     return buf;
 }
+
+uint16_t Checksum_computeChecksum(const char *buffer, int length)
+{
+    uint16_t i;
+    uint16_t crc = 0xFFFF;
+    if (length == 0) length = 1;
+
+    while (length--) {
+       crc ^= *buffer;
+       for (i = 0; i<8; i++)
+       {
+          if (crc & 1) {
+            crc >>= 1;
+            crc ^= 0xA001;
+          } else {
+            crc >>= 1;
+          }
+       }
+       buffer++;
+    }
+
+    return crc;
+}

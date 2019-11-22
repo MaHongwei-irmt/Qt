@@ -8,6 +8,7 @@
 
 QByteArray  HexStringToByteArray(QString HexString);
 QString     ByteArrayToHexString(QByteArray &ba);
+uint16_t    Checksum_computeChecksum(const char *buffer, int length);
 
 namespace Ui {
 class FSC_MainWindow;
@@ -16,6 +17,7 @@ class FSC_MainWindow;
 #define FSCLOG  qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:zzz")
 
 #define SCALE_NUMBER    12
+
 #define SOCKET_NUMBER   17
 
 #define SOCKET_PLC_INDEX        0
@@ -72,7 +74,9 @@ private:
 
     void SendScaleShow(void);
     void SendScaleZero(void);
+    void makeReadFMSumRate(QByteArray *buf, int station);
 
+    void flushSendBuf(void);
     void showFresh(void);
 
     bool        sktConed[SOCKET_NUMBER];

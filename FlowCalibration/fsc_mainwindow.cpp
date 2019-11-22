@@ -364,16 +364,7 @@ void FSC_MainWindow::SendScaleShow(void)
     sktBufSend[SOCKET_SCALE_INDEX][0]=0x1B;
     sktBufSend[SOCKET_SCALE_INDEX][1]=0x70;
 
-    if (sktConed[SOCKET_SCALE_INDEX])
-    {
-        fsc_global::sktTcp[SOCKET_SCALE_INDEX]->write(sktBufSend[SOCKET_SCALE_INDEX]);
-
-        FSCLOG << "Socket write: " + QString::number(SOCKET_SCALE_INDEX) + " " + QString::number(sktBufSend[SOCKET_SCALE_INDEX].size()) + \
-                  " " + ByteArrayToHexString(sktBufSend[SOCKET_SCALE_INDEX]);
-
-    }
-
-    sktBufSend[SOCKET_SCALE_INDEX].resize(0);
+    flushSendBuf();
 }
 
 void FSC_MainWindow::SendScaleZero(void)
@@ -382,15 +373,27 @@ void FSC_MainWindow::SendScaleZero(void)
     sktBufSend[SOCKET_SCALE_INDEX][0]=0x1B;
     sktBufSend[SOCKET_SCALE_INDEX][1]=0x74;
 
-    if (sktConed[SOCKET_SCALE_INDEX])
-    {
-        fsc_global::sktTcp[SOCKET_SCALE_INDEX]->write(sktBufSend[SOCKET_SCALE_INDEX]);
+    flushSendBuf();
+}
 
-        FSCLOG << "Socket write: " + QString::number(SOCKET_SCALE_INDEX) + " " + QString::number(sktBufSend[SOCKET_SCALE_INDEX].size()) + \
-                  " " + ByteArrayToHexString(sktBufSend[SOCKET_SCALE_INDEX]);
-    }
+void FSC_MainWindow::makeReadFMSumRate(QByteArray *buf, int station)
+{
+    uint16_t crc = 0;
 
-    sktBufSend[SOCKET_SCALE_INDEX].resize(0);
+    buf->resize(8);
+
+    (*buf)[0] = static_cast<char>(station);
+    (*buf)[1] = 0x4;
+    (*buf)[2] = 0;
+    (*buf)[3] = static_cast<char>(0x97);
+    (*buf)[4] = 0;
+    (*buf)[5] = 55;
+
+    crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
+
+    (*buf)[6]= static_cast<char>(crc) ;
+    (*buf)[7]= static_cast<char>(crc >> 8);
+
 }
 
 void FSC_MainWindow::mainLoop()
@@ -423,23 +426,35 @@ void FSC_MainWindow::mainLoop()
         sktBufSend[SOCKET_FLOWM1_INDEX][0]=0x1B;
         sktBufSend[SOCKET_FLOWM1_INDEX][1]=0x74;
 
-        if (sktConed[SOCKET_FLOWM1_INDEX])
-        {
-            fsc_global::sktTcp[SOCKET_FLOWM1_INDEX]->write(sktBufSend[SOCKET_FLOWM1_INDEX]);
-
-            FSCLOG << "Socket write: " + QString::number(SOCKET_FLOWM1_INDEX) + " " + QString::number(sktBufSend[SOCKET_FLOWM1_INDEX].size()) + \
-                      " " + ByteArrayToHexString(sktBufSend[SOCKET_FLOWM1_INDEX]);
-        }
-
+        flushSendBuf();
     }//test
 
-    SendScaleShow();//test
+    SendScaleShow();
+
+    //flushSendBuf();
 
     showFresh();
 
 }
 
-void FSC_MainWindow::showFresh()
+void FSC_MainWindow::flushSendBuf(void)
+{
+    for (int i = 0; i < SOCKET_NUMBER; i++)
+    {
+
+        if (sktConed[i] && sktBufSend[i].size() > 0)
+        {
+            fsc_global::sktTcp[i]->write(sktBufSend[i]);
+
+            FSCLOG << "Socket write hex: skt-" + QString::number(i) + " " + QString::number(sktBufSend[i].size()) + \
+                      " " + ByteArrayToHexString(sktBufSend[i]);
+
+            sktBufSend[i].resize(0);
+        }
+    }
+}
+
+void FSC_MainWindow::showFresh(void)
 {
     ui->lineEdit_scale_show->setEnabled(sktConed[SOCKET_SCALE_INDEX]);
     ui->lineEdit_scale_flow->setEnabled(sktConed[SOCKET_SCALE_INDEX]);
@@ -510,13 +525,13 @@ void FSC_MainWindow::skt_read(int i)
 {
     sktBufRev[i] = fsc_global::sktTcp[i]->readAll();
 
-    FSCLOG << "Socket read: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + ByteArrayToHexString(sktBufRev[i]);
+    FSCLOG << "Socket read hex: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + ByteArrayToHexString(sktBufRev[i]);
 
     switch (i)
     {
     case SOCKET_SCALE_INDEX:
 
-        FSCLOG << "Socket read: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + sktBufRev[i];
+        FSCLOG << "Socket read string: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + sktBufRev[i];
 
         showScaleFlow = sktBufRev[i].toDouble() - showScaleSum;
         showScaleSum = sktBufRev[i].toDouble();
@@ -534,11 +549,9 @@ void FSC_MainWindow::skt_read(int i)
 
             scale_test += 0.1 * j++;
 
-            QByteArray tmp = QByteArray::number(scale_test, 'f', 2 );
+            sktBufSend[SOCKET_STD_FLOWM_INDEX] = QByteArray::number(scale_test, 'f', 2 );
 
-            fsc_global::sktTcp[SOCKET_STD_FLOWM_INDEX]->write(tmp);
-
-            FSCLOG << "Socket write: " + QString::number(SOCKET_STD_FLOWM_INDEX) + " " + tmp;
+            flushSendBuf();
         }
 
         break;
