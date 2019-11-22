@@ -5,7 +5,7 @@
 #include <QtCore/QCoreApplication>
 #include <QSettings>
 #include <QDebug>
-
+#include <math.h>
 
 QVector <fsc_para_ini>  fsc_global::para_ini;
 QTcpSocket*             fsc_global::sktTcp[SOCKET_NUMBER];
@@ -315,7 +315,19 @@ void FSC_MainWindow::DataInit(void)
     ui->lineEdit_stdFM_flow->setText("NaN");
 
 
-    ui->lineEdit_FM_1->setText("NaN");
+
+    showScaleSum = -100000.012;// static_cast<double>(nanf(""));
+    showScaleFlow = static_cast<double>(nanf(""));
+    showSTDFMSum = static_cast<double>(nanf(""));
+    showSTDFMFlow = static_cast<double>(nanf(""));
+
+    for (int i = 0; i < SCALE_NUMBER; i++)
+    {
+        showFMSum[i] = static_cast<double>(nanf(""));
+        showFMFlow[i] = static_cast<double>(nanf(""));
+    }
+
+    ui->lineEdit_FM_1->setText(QString::number(showScaleSum, 'f', 3));
     ui->lineEdit_FM_2->setText("NaN");
     ui->lineEdit_FM_3->setText("NaN");
     ui->lineEdit_FM_4->setText("NaN");
@@ -341,14 +353,9 @@ void FSC_MainWindow::DataInit(void)
     ui->lineEdit_FM_11_flow->setText("NaN");
     ui->lineEdit_FM_12_flow->setText("NaN");
 
-/*
-    double  showScaleSum;
-    double  showScaleFlow;
-    double  showSTDFMSum;
-    double  showSTDFMFlow;
-    double  showFMSum[SCALE_NUMBER];
-    double  showFMFlow[SCALE_NUMBER];
-*/
+
+
+
 
 }
 
@@ -495,6 +502,52 @@ void FSC_MainWindow::mainLoop()
     ui->lineEdit_FM_10_flow->setEnabled(sktConed[SOCKET_FLOWM10_INDEX]);
     ui->lineEdit_FM_11_flow->setEnabled(sktConed[SOCKET_FLOWM11_INDEX]);
     ui->lineEdit_FM_12_flow->setEnabled(sktConed[SOCKET_FLOWM12_INDEX]);
+
+//    ui->lineEdit_scale_show->setText(showScaleSum);
+//    ui->lineEdit_scale_flow->setText("NaN");
+
+//    ui->lineEdit_stdFM_sum->setText("NaN");
+//    ui->lineEdit_stdFM_flow->setText("NaN");
+
+
+//    showScaleSum = static_cast<double>(nanf(""));
+//    showScaleFlow = static_cast<double>(nanf(""));
+//    showSTDFMSum = static_cast<double>(nanf(""));
+//    showSTDFMFlow = static_cast<double>(nanf(""));
+
+//    for (int i = 0; i < SCALE_NUMBER; i++)
+//    {
+//        showFMSum[i] = static_cast<double>(nanf(""));
+//        showFMFlow[i] = static_cast<double>(nanf(""));
+//    }
+
+//    ui->lineEdit_FM_1->setText(QString::number(showScaleSum, 'f', 2));
+//    ui->lineEdit_FM_2->setText("NaN");
+//    ui->lineEdit_FM_3->setText("NaN");
+//    ui->lineEdit_FM_4->setText("NaN");
+//    ui->lineEdit_FM_5->setText("NaN");
+//    ui->lineEdit_FM_6->setText("NaN");
+//    ui->lineEdit_FM_7->setText("NaN");
+//    ui->lineEdit_FM_8->setText("NaN");
+//    ui->lineEdit_FM_9->setText("NaN");
+//    ui->lineEdit_FM_10->setText("NaN");
+//    ui->lineEdit_FM_11->setText("NaN");
+//    ui->lineEdit_FM_12->setText("NaN");
+
+//    ui->lineEdit_FM_1_flow->setText("NaN");
+//    ui->lineEdit_FM_2_flow->setText("NaN");
+//    ui->lineEdit_FM_3_flow->setText("NaN");
+//    ui->lineEdit_FM_4_flow->setText("NaN");
+//    ui->lineEdit_FM_5_flow->setText("NaN");
+//    ui->lineEdit_FM_6_flow->setText("NaN");
+//    ui->lineEdit_FM_7_flow->setText("NaN");
+//    ui->lineEdit_FM_8_flow->setText("NaN");
+//    ui->lineEdit_FM_9_flow->setText("NaN");
+//    ui->lineEdit_FM_10_flow->setText("NaN");
+//    ui->lineEdit_FM_11_flow->setText("NaN");
+//    ui->lineEdit_FM_12_flow->setText("NaN");
+
+
 
 }
 
